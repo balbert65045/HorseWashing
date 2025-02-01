@@ -31,21 +31,29 @@ public class PlayerMovement : MonoBehaviour
     float currentMoveSpeed;
 
 //    Animator animator;
+    List<SlideArea> slideAreasInside = new List<SlideArea>();
 
-    public void SetSlide(bool value)
+    public void SetSlide(bool value, SlideArea slideArea)
     {
         if (value)
         {
-            currentAcceleration = SlideAcceleration;
-            currentDeceleration = SlideDeceleration;
-            currentMoveSpeed = SlideMoveSpeed;
-
+            if (slideAreasInside.Count == 0)
+            {
+                currentAcceleration = SlideAcceleration;
+                currentDeceleration = SlideDeceleration;
+                currentMoveSpeed = SlideMoveSpeed;
+            }
+            slideAreasInside.Add(slideArea);
         }
         else
         {
-            currentAcceleration = Acceleration;
-            currentDeceleration = Decelleration;
-            currentMoveSpeed = MoveSpeed;
+            slideAreasInside.Remove(slideArea);
+            if(slideAreasInside.Count == 0)
+            {
+                currentAcceleration = Acceleration;
+                currentDeceleration = Decelleration;
+                currentMoveSpeed = MoveSpeed;
+            }
 
         }
     }

@@ -8,7 +8,13 @@ public class SlideArea : MonoBehaviour
     {
         if (other.GetComponent<PlayerMovement>())
         {
-            other.GetComponent<PlayerMovement>().SetSlide(true);
+            if (other.GetComponent<PlayerStateController>().HoldingMop())
+            {
+                this.gameObject.SetActive(false);
+                return;
+            }
+
+            other.GetComponent<PlayerMovement>().SetSlide(true, this);
         }
     }
 
@@ -16,7 +22,14 @@ public class SlideArea : MonoBehaviour
     {
         if (other.GetComponent<PlayerMovement>())
         {
-            other.GetComponent<PlayerMovement>().SetSlide(false);
+            other.GetComponent<PlayerMovement>().SetSlide(false, this);
         }
     }
+
+    Vector3 initSize;
+    private void Start()
+    {
+        initSize = transform.localScale;
+    }
+
 }

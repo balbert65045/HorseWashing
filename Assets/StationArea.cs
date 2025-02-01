@@ -13,6 +13,9 @@ public enum HorseState
 
 public class StationArea : MonoBehaviour
 {
+
+    [SerializeField] SlipperyStateArea SliperyArea;
+
     [SerializeField] MeshRenderer m_Renderer;
     [SerializeField] Material m_happyMaterial;
     [SerializeField] Material m_neutralMaterial;
@@ -79,6 +82,8 @@ public class StationArea : MonoBehaviour
             OnStationInteract(this, true);
         }
         //Lose points
+        FindObjectOfType<Points>().RemovePoints(10);
+
         Leave();
     }
 
@@ -130,10 +135,18 @@ public class StationArea : MonoBehaviour
 
     public void FinishCleaningHorse()
     {
+        FindObjectOfType<Points>().AddPoints(10);
+
+        IncreaseSlipperyArea();
         //Give points
         Leave();
     }
 
+
+    void IncreaseSlipperyArea()
+    {
+        SliperyArea.IncreaseAreas();
+    }
 
     public void HoldHorse(Horse horse)
     {

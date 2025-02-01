@@ -10,6 +10,12 @@ public class PlayerStateController : MonoBehaviour
     bool canDropPickupShampoo = false;
     bool canDropPickupMop = false;
     StationArea currentStationToInteractWith;
+
+    public bool HoldingMop()
+    {
+        return Mop.activeSelf;
+    }
+
     public void EnableGrabDropShampoo(bool enable)
     {
         canDropPickupShampoo = enable;
