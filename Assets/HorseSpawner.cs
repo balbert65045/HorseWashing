@@ -8,7 +8,7 @@ public class HorseSpawner : MonoBehaviour
     [SerializeField] GameObject HorsePrefab;
     [SerializeField] float TimeUntilHorseSpawn = 5f;
 
-    float lastHorseSpawnedTime = -4;
+    float lastHorseSpawnedTime = -100000;
 
     void Update()
     {

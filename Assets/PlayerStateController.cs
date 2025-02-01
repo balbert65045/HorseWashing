@@ -5,9 +5,9 @@ using UnityEngine;
 public class PlayerStateController : MonoBehaviour
 {
     [SerializeField] GameObject wetAreaPrefab;
-    [SerializeField] float WetRate = 2f;
-    float timeSinceLastWet = 0;
-    float timeInDry = 0;
+    //[SerializeField] float WetRate = 2f;
+    //float timeSinceLastWet = 0;
+    //float timeInDry = 0;
 
     [SerializeField] GameObject Shampoo;
     [SerializeField] GameObject Mop;
@@ -66,7 +66,10 @@ public class PlayerStateController : MonoBehaviour
             }
         }
 
+    }
 
+    public void AttemptToSpillShampoo()
+    {
         if (HoldingShampoo() && !pm.inSlideArea())
         {
             SpawnSlideArea();
@@ -75,13 +78,7 @@ public class PlayerStateController : MonoBehaviour
 
     void SpawnSlideArea()
     {
-        timeInDry += Time.deltaTime;
-        float randomTime = Random.Range(WetRate, WetRate * 2);
-        if (timeInDry > timeSinceLastWet + randomTime)
-        {
-            timeSinceLastWet = timeInDry;
-            Instantiate(wetAreaPrefab, new Vector3(transform.position.x, -1.2f, transform.position.z), Quaternion.identity);
-        }
+        Instantiate(wetAreaPrefab, new Vector3(transform.position.x, -1.2f, transform.position.z), Quaternion.identity);
     }
 
     void InteractWithStation()

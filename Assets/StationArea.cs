@@ -13,7 +13,7 @@ public enum HorseState
 
 public class StationArea : MonoBehaviour
 {
-
+    [SerializeField] bool Left = false;
     [SerializeField] SlipperyStateArea SliperyArea;
 
     [SerializeField] MeshRenderer m_Renderer;
@@ -30,6 +30,7 @@ public class StationArea : MonoBehaviour
     public Horse horseHolding;
 
     PlayerStateController NearbyPlayer;
+    StationAudio stationAudio;
 
     float TimeSinceEnteringChair;
     HorseState currentState = HorseState.Happy;
@@ -41,6 +42,7 @@ public class StationArea : MonoBehaviour
     private void Start()
     {
         waitingMaterial = m_Renderer.material;
+        stationAudio = GetComponentInChildren<StationAudio>();
     }
 
 
@@ -61,6 +63,8 @@ public class StationArea : MonoBehaviour
                 case HorseState.Neutral:
                     if (Time.time - TimeSinceEnteringChair > angerStepThreshold * 2)
                     {
+                        stationAudio.PlayHorseGettingMad();
+
                         m_Renderer.material = m_MadMaterial;
                         currentState = HorseState.Mad;
                     }
@@ -150,6 +154,9 @@ public class StationArea : MonoBehaviour
 
     public void HoldHorse(Horse horse)
     {
+        stationAudio.PlayHorseEntering();
+
+
         currentState = HorseState.Happy;
         horseHolding = horse;
         TimeSinceEnteringChair = Time.time;
@@ -162,6 +169,14 @@ public class StationArea : MonoBehaviour
             //Show Interact
         }
         //
-        horse.gameObject.SetActive(false);
+        horse.transform.position = new Vector3(transform.position.x, horse.transform.position.y, transform.position.z);
+        if (Left)
+        {
+            horse.transform.rotation = Quaternion.Euler(new Vector3(0, 90, 0));
+        }
+        else
+        {
+            horse.transform.rotation = Quaternion.Euler(new Vector3(0, -90, 0));
+        }
     }
 }

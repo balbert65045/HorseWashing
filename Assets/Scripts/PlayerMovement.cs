@@ -93,11 +93,12 @@ public class PlayerMovement : MonoBehaviour
 
             //animator.SetBool("IsMoving", false);
         }
-        if (Input.GetKeyDown(KeyCode.LeftShift) && dashAvailable && !isDashing)
+        if (Input.GetKeyDown(KeyCode.Space) && dashAvailable && !isDashing)
         {
             dashAvailable = false;
             isDashing = true;
             timeOfDash = Time.timeSinceLevelLoad;
+            GetComponent<PlayerStateController>().AttemptToSpillShampoo();
         }
 
         if(dashCoolingDown && Time.timeSinceLevelLoad > timeOfDash + DashTime + DashCooldown)

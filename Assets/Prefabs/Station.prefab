@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1082733107557025389}
   - component: {fileID: 3986291255625267557}
   - component: {fileID: 7842615429278231671}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 2981473099773228246}
   - component: {fileID: 6986538936299244428}
   - component: {fileID: 6361646393219936107}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SlipperyArea (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -161,7 +161,7 @@ GameObject:
   - component: {fileID: 5478648811340514164}
   - component: {fileID: 6297477551603481325}
   - component: {fileID: 3514619619205681251}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -244,7 +244,7 @@ GameObject:
   - component: {fileID: 6060950287507911006}
   - component: {fileID: 9141838102779224799}
   - component: {fileID: 1510475576236762441}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SlipperyArea (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -311,7 +311,7 @@ GameObject:
   - component: {fileID: 204956484244791993}
   - component: {fileID: 7535954295597755039}
   - component: {fileID: 8323660132721780521}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -392,7 +392,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 799958083985232452}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Handle Slide Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -429,7 +429,7 @@ GameObject:
   - component: {fileID: 4242697472079863458}
   - component: {fileID: 4172280540591356938}
   - component: {fileID: 8637162585290501195}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SlipperyArea (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -495,7 +495,7 @@ GameObject:
   m_Component:
   - component: {fileID: 867364752816435223}
   - component: {fileID: 4062571936337066904}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -510,7 +510,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 450954384305333812}
   m_LocalRotation: {x: 0.27671975, y: -0, z: -0, w: 0.96095073}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.201}
   m_LocalScale: {x: 0.008660721, y: 0.03182986, z: 0.027723}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -521,7 +521,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 32.129, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.66}
+  m_AnchoredPosition: {x: 0, y: 0.835}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &4062571936337066904
@@ -584,7 +584,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5796004429111031682}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -622,7 +622,7 @@ GameObject:
   - component: {fileID: 5868377198308983887}
   - component: {fileID: 6933087012120728184}
   - component: {fileID: 6791381660157683159}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SlipperyArea (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -689,7 +689,7 @@ GameObject:
   - component: {fileID: 727874726334538997}
   - component: {fileID: 4850559166679651350}
   - component: {fileID: 2186956232129818153}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SlipperyArea (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -756,7 +756,7 @@ GameObject:
   - component: {fileID: 4850471827471978842}
   - component: {fileID: 1457852550240463761}
   - component: {fileID: 6798224582743438509}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -828,6 +828,134 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &980688320003918720
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3969534488087738779}
+  - component: {fileID: 3712745314772350602}
+  m_Layer: 7
+  m_Name: HorseGettingMad
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3969534488087738779
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 980688320003918720}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2059587799616644109}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &3712745314772350602
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 980688320003918720}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 24300002, guid: bd77eb2996ac5ad48917060d2f959a49, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 28b30154cf8f8464da4c963d1a02d2f2, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1041560204308559058
 GameObject:
   m_ObjectHideFlags: 0
@@ -839,7 +967,7 @@ GameObject:
   - component: {fileID: 3702290451391390693}
   - component: {fileID: 7400004025675573332}
   - component: {fileID: 7812938647752190509}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SlipperyArea (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -904,7 +1032,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2963955025389353538}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tier2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -949,7 +1077,7 @@ GameObject:
   - component: {fileID: 8456009029353704415}
   - component: {fileID: 1424352439565907439}
   - component: {fileID: 8075113975536266702}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SlipperyArea (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1016,7 +1144,7 @@ GameObject:
   - component: {fileID: 2545194409558168827}
   - component: {fileID: 5063812970109866922}
   - component: {fileID: 2112040938817078485}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1099,7 +1227,7 @@ GameObject:
   - component: {fileID: 6522114733704813028}
   - component: {fileID: 1683594873159795503}
   - component: {fileID: 4268732413263586617}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1182,7 +1310,7 @@ GameObject:
   - component: {fileID: 5423532681388802096}
   - component: {fileID: 8171903372043821360}
   - component: {fileID: 1495688792290714848}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1204,7 +1332,7 @@ RectTransform:
   m_Father: {fileID: 5796004429111031682}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0.496, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1257,7 +1385,7 @@ GameObject:
   - component: {fileID: 35347926190269676}
   - component: {fileID: 6546157696468717556}
   - component: {fileID: 108751692633350286}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1332,7 +1460,7 @@ GameObject:
   - component: {fileID: 8742612671585556389}
   - component: {fileID: 3624887561646856799}
   - component: {fileID: 4646366443592454332}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1415,7 +1543,7 @@ GameObject:
   - component: {fileID: 890413834146084270}
   - component: {fileID: 1195825331684170478}
   - component: {fileID: 8893399767232600766}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1498,7 +1626,7 @@ GameObject:
   - component: {fileID: 166100330406237672}
   - component: {fileID: 868799208961037257}
   - component: {fileID: 8441202093446822093}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1581,7 +1709,7 @@ GameObject:
   - component: {fileID: 1993635525289101861}
   - component: {fileID: 6861968956804572985}
   - component: {fileID: 4609527436750329072}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SlipperyArea (26)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1648,7 +1776,7 @@ GameObject:
   - component: {fileID: 2544673925165157701}
   - component: {fileID: 8479100392238946642}
   - component: {fileID: 5677992457132291511}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SlipperyArea (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1716,7 +1844,7 @@ GameObject:
   - component: {fileID: 4756445640734014711}
   - component: {fileID: 8016861970488318392}
   - component: {fileID: 8991916624185360301}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Station
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1756,7 +1884,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2439942314520172715}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1808,7 +1936,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -1823,7 +1951,7 @@ GameObject:
   - component: {fileID: 356775434412928008}
   - component: {fileID: 2622408571032945062}
   - component: {fileID: 2025068448011466337}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SlipperyArea (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1890,7 +2018,7 @@ GameObject:
   - component: {fileID: 3320705639392725297}
   - component: {fileID: 829413285962412135}
   - component: {fileID: 4283415331891970962}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1973,7 +2101,7 @@ GameObject:
   - component: {fileID: 4453273934135072838}
   - component: {fileID: 6411266017764091874}
   - component: {fileID: 6443954048041768915}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2056,7 +2184,7 @@ GameObject:
   - component: {fileID: 7969753990511053166}
   - component: {fileID: 4867479432161384543}
   - component: {fileID: 1572097178755821411}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TriggerArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2077,6 +2205,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3319454047890633936}
+  - {fileID: 2059587799616644109}
   m_Father: {fileID: 5081213249841029164}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &4867479432161384543
@@ -2112,6 +2241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd09050245bb124b9c1b7592be93b7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Left: 0
   SliperyArea: {fileID: 1845119330213950769}
   m_Renderer: {fileID: 8016861970488318392}
   m_happyMaterial: {fileID: 2100000, guid: eee5c4bc803d2e54a8ef85a9c935f92e, type: 2}
@@ -2132,7 +2262,7 @@ GameObject:
   - component: {fileID: 697122492699548574}
   - component: {fileID: 5613423811520777942}
   - component: {fileID: 5747598699676001949}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SlipperyArea (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2199,7 +2329,7 @@ GameObject:
   - component: {fileID: 7217075406475151033}
   - component: {fileID: 3275818003700390479}
   - component: {fileID: 7995954256192227425}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2282,7 +2412,7 @@ GameObject:
   - component: {fileID: 2671233329912232562}
   - component: {fileID: 2634101865077506090}
   - component: {fileID: 468894126823455665}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2363,7 +2493,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7209580402658305814}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tier1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2400,7 +2530,7 @@ GameObject:
   - component: {fileID: 4997508508851678522}
   - component: {fileID: 7157606889040616886}
   - component: {fileID: 8021407328839254746}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2483,7 +2613,7 @@ GameObject:
   - component: {fileID: 4656842760669222033}
   - component: {fileID: 1759373928235475649}
   - component: {fileID: 6954135639272808537}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2566,7 +2696,7 @@ GameObject:
   - component: {fileID: 6940810684065690525}
   - component: {fileID: 4097107667013237281}
   - component: {fileID: 5749255175426822944}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SlipperyArea (25)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2633,7 +2763,7 @@ GameObject:
   - component: {fileID: 1489751383699271065}
   - component: {fileID: 4419360770738832683}
   - component: {fileID: 4266588711431172937}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SlipperyArea (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2700,7 +2830,7 @@ GameObject:
   - component: {fileID: 6633993039085844883}
   - component: {fileID: 6936694909219337759}
   - component: {fileID: 5936481495362750729}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SlipperyArea (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2767,7 +2897,7 @@ GameObject:
   - component: {fileID: 7554337669203104707}
   - component: {fileID: 7246415006425609895}
   - component: {fileID: 8805621792575022291}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2850,7 +2980,7 @@ GameObject:
   - component: {fileID: 4277933495964117560}
   - component: {fileID: 9198775121350124028}
   - component: {fileID: 2161611480122982877}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SlipperyArea (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2917,7 +3047,7 @@ GameObject:
   - component: {fileID: 2485285398380162305}
   - component: {fileID: 4799504799505754492}
   - component: {fileID: 9146384378048992472}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SlipperyArea (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2984,7 +3114,7 @@ GameObject:
   - component: {fileID: 1438940193060849497}
   - component: {fileID: 6456272285773712463}
   - component: {fileID: 3797932098377148575}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SlipperyArea (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3053,7 +3183,7 @@ GameObject:
   - component: {fileID: 209644646723603531}
   - component: {fileID: 3339872393194763503}
   - component: {fileID: 4888718916162477143}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3068,7 +3198,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5363922038300465830}
   m_LocalRotation: {x: 0.44307896, y: 0, z: 0, w: 0.8964826}
-  m_LocalPosition: {x: 0, y: 0, z: -0.28235292}
+  m_LocalPosition: {x: 0, y: 0, z: -0.217}
   m_LocalScale: {x: 0.58823526, y: 0.5151647, z: 0.58823526}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3077,7 +3207,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 52.601, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.15647057}
+  m_AnchoredPosition: {x: 0, y: 0.501}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &4984458935178212375
@@ -3167,7 +3297,7 @@ GameObject:
   - component: {fileID: 8029596628767711525}
   - component: {fileID: 5444316416052670105}
   - component: {fileID: 9083324603060626420}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3250,7 +3380,7 @@ GameObject:
   - component: {fileID: 7340175575561349620}
   - component: {fileID: 3498891540466392416}
   - component: {fileID: 8654803968169707044}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3322,6 +3452,134 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &5716551689144172562
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7923884879378350550}
+  - component: {fileID: 5905455717844150035}
+  m_Layer: 7
+  m_Name: HorseEnter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7923884879378350550
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5716551689144172562}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2059587799616644109}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &5905455717844150035
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5716551689144172562}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 24300002, guid: bd77eb2996ac5ad48917060d2f959a49, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 4fd3393dd7d1fe54d896ff64b5c5a035, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.748
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &5740634064613228441
 GameObject:
   m_ObjectHideFlags: 0
@@ -3333,7 +3591,7 @@ GameObject:
   - component: {fileID: 7909303649809360232}
   - component: {fileID: 4217495340522886804}
   - component: {fileID: 5467380418142374068}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3416,7 +3674,7 @@ GameObject:
   - component: {fileID: 6233317575249256246}
   - component: {fileID: 8089742907330487378}
   - component: {fileID: 4971733337618961767}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3488,6 +3746,54 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &6172058928869905563
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2059587799616644109}
+  - component: {fileID: 7122886130683639486}
+  m_Layer: 7
+  m_Name: StationAudio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2059587799616644109
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6172058928869905563}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7923884879378350550}
+  - {fileID: 3969534488087738779}
+  m_Father: {fileID: 7969753990511053166}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7122886130683639486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6172058928869905563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e02fff4efd909744aa29806ecfa0d712, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HorseEntering: {fileID: 5905455717844150035}
+  HorseGettingMad: {fileID: 3712745314772350602}
 --- !u!1 &6386790648886756689
 GameObject:
   m_ObjectHideFlags: 0
@@ -3499,7 +3805,7 @@ GameObject:
   - component: {fileID: 6933685350862502337}
   - component: {fileID: 7572351663148622281}
   - component: {fileID: 2300530761005375876}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3582,7 +3888,7 @@ GameObject:
   - component: {fileID: 1785405113645265848}
   - component: {fileID: 4858830466067269822}
   - component: {fileID: 8173318756347952060}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SlipperyArea (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3649,7 +3955,7 @@ GameObject:
   - component: {fileID: 6435656118698750945}
   - component: {fileID: 1260555769233073164}
   - component: {fileID: 5036367530995642995}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3732,7 +4038,7 @@ GameObject:
   - component: {fileID: 3236060540309258751}
   - component: {fileID: 1887487386318799212}
   - component: {fileID: 7011309053215169664}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3815,7 +4121,7 @@ GameObject:
   - component: {fileID: 7620318845655242634}
   - component: {fileID: 3914792805077014301}
   - component: {fileID: 8974933932010574912}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SlipperyArea (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3882,7 +4188,7 @@ GameObject:
   - component: {fileID: 7517864874911248974}
   - component: {fileID: 3072136044065397816}
   - component: {fileID: 5060130087415583178}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SlipperyArea (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3949,7 +4255,7 @@ GameObject:
   - component: {fileID: 8155698423007404600}
   - component: {fileID: 1640747001359356982}
   - component: {fileID: 6990368005755205776}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SlipperyArea (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4016,7 +4322,7 @@ GameObject:
   - component: {fileID: 8198622854045243103}
   - component: {fileID: 5238482079485228656}
   - component: {fileID: 2169441988551108620}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SlipperyArea (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4083,7 +4389,7 @@ GameObject:
   - component: {fileID: 2687493658929325613}
   - component: {fileID: 3570558635827574853}
   - component: {fileID: 1778010530337716126}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4166,7 +4472,7 @@ GameObject:
   - component: {fileID: 4932931213122248897}
   - component: {fileID: 506475992257711519}
   - component: {fileID: 3136129087090981328}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SlipperyArea (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4233,7 +4539,7 @@ GameObject:
   - component: {fileID: 978315517608203014}
   - component: {fileID: 7547549058613165588}
   - component: {fileID: 4872284742792653950}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4316,7 +4622,7 @@ GameObject:
   - component: {fileID: 8058215910913473309}
   - component: {fileID: 2794674206798157874}
   - component: {fileID: 1476303935480487450}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4399,7 +4705,7 @@ GameObject:
   - component: {fileID: 2596332787435102364}
   - component: {fileID: 1028183497930763449}
   - component: {fileID: 8813428780797348114}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SlipperyArea (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4466,7 +4772,7 @@ GameObject:
   - component: {fileID: 6530059407146563620}
   - component: {fileID: 4836698144159722536}
   - component: {fileID: 3540845621823764557}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SlipperyArea (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4533,7 +4839,7 @@ GameObject:
   - component: {fileID: 9044601298325557969}
   - component: {fileID: 2186345138851643015}
   - component: {fileID: 4034847644225919354}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SlipperyArea (24)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4600,7 +4906,7 @@ GameObject:
   - component: {fileID: 7269830119353728258}
   - component: {fileID: 1927682034115905570}
   - component: {fileID: 4253047179708598831}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4681,7 +4987,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5935798451604696811}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tier3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4728,7 +5034,7 @@ GameObject:
   - component: {fileID: 4755176033474192536}
   - component: {fileID: 5095154237655828382}
   - component: {fileID: 334413268192882160}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4811,7 +5117,7 @@ GameObject:
   - component: {fileID: 3306673919283898487}
   - component: {fileID: 1753861810856365509}
   - component: {fileID: 9022925439609398688}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SlipperyArea (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4878,7 +5184,7 @@ GameObject:
   - component: {fileID: 4616831350765397353}
   - component: {fileID: 7995286503660272391}
   - component: {fileID: 781498621545313668}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SlipperyArea (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4945,7 +5251,7 @@ GameObject:
   - component: {fileID: 2033468913511107204}
   - component: {fileID: 2958526160530412196}
   - component: {fileID: 7481263455040969261}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SlipperyArea (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5011,7 +5317,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8406975938458642827}
   - component: {fileID: 1845119330213950769}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SlipperyState
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5092,7 +5398,7 @@ GameObject:
   - component: {fileID: 6856592486434481055}
   - component: {fileID: 7733852883927309039}
   - component: {fileID: 58265179299422850}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5175,7 +5481,7 @@ GameObject:
   - component: {fileID: 8141871847839352680}
   - component: {fileID: 1932121497132792546}
   - component: {fileID: 6265695714033514559}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SlipperyArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5242,7 +5548,7 @@ GameObject:
   - component: {fileID: 4846425659040779990}
   - component: {fileID: 6257335396386278755}
   - component: {fileID: 3074759573186336375}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5322,6 +5628,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7209580402658305814}
     m_Modifications:
+    - target: {fileID: 3910307275490920223, guid: 3975c2fef99287d409e83cb7c9954090, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5880383969811591617, guid: 3975c2fef99287d409e83cb7c9954090, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.78
@@ -5365,6 +5675,10 @@ PrefabInstance:
     - target: {fileID: 7042746403379376213, guid: 3975c2fef99287d409e83cb7c9954090, type: 3}
       propertyPath: m_Name
       value: SlipperyArea (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7042746403379376213, guid: 3975c2fef99287d409e83cb7c9954090, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7042746403379376213, guid: 3975c2fef99287d409e83cb7c9954090, type: 3}
       propertyPath: m_IsActive
