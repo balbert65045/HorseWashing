@@ -2772,8 +2772,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74f88f1b57cc6c04b82ebfac9d3556c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Panel: {fileID: 0}
-  ScoreText: {fileID: 0}
+  Panel: {fileID: 1929053931}
+  ScoreText: {fileID: 565207155}
 --- !u!1 &1371678039
 GameObject:
   m_ObjectHideFlags: 0
@@ -3321,7 +3321,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37e93eed5a9bf144996a9ef2025eafa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameplayTime: 120
+  GameplayTime: 10
 --- !u!4 &1632297255
 Transform:
   m_ObjectHideFlags: 0
@@ -5022,6 +5022,10 @@ PrefabInstance:
     - target: {fileID: 7677123573341006963, guid: 1860fe66a58486f449c57caa4f327fc6, type: 3}
       propertyPath: m_Name
       value: Horse
+      objectReference: {fileID: 0}
+    - target: {fileID: 7677123573341006963, guid: 1860fe66a58486f449c57caa4f327fc6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

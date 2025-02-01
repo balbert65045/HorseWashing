@@ -17,9 +17,16 @@ public class PlayerStateController : MonoBehaviour
     StationArea currentStationToInteractWith;
 
     PlayerMovement pm;
+    bool finished = false;
     private void Start()
     {
         pm = GetComponent<PlayerMovement>();
+        FindObjectOfType<GameplayController>().OnLevelComplete += OnLevelComplete;
+    }
+
+    void OnLevelComplete()
+    {
+        finished = true;
     }
 
     public bool HoldingMop()
@@ -50,6 +57,7 @@ public class PlayerStateController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (finished) { return; }
         if(Input.GetKeyDown(KeyCode.Return))
         {
             if (canDropPickupShampoo)
