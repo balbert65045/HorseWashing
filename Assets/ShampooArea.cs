@@ -5,6 +5,7 @@ using UnityEngine;
 public class ShampooArea : MonoBehaviour
 {
 
+    [SerializeField] GameObject ShampooBottle;
     private void OnTriggerEnter(Collider other)
     {
         if (other.GetComponent<PlayerStateController>())
@@ -19,5 +20,15 @@ public class ShampooArea : MonoBehaviour
         {
             other.GetComponent<PlayerStateController>().EnableGrabDropShampoo(false);
         }
+    }
+
+    public void ShampooPickedUp()
+    {
+        ShampooBottle.gameObject.SetActive(false);
+    }
+
+    public void ShampooDropped()
+    {
+        ShampooBottle.gameObject.SetActive(true);
     }
 }

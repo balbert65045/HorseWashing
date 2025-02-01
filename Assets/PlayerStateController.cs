@@ -99,10 +99,12 @@ public class PlayerStateController : MonoBehaviour
         if (Mop.gameObject.activeSelf) { return; }
         if (Shampoo.gameObject.activeSelf)
         {
+            FindObjectOfType<ShampooArea>().ShampooDropped();
             Shampoo.gameObject.SetActive(false);
         }
         else
         {
+            FindObjectOfType<ShampooArea>().ShampooPickedUp();
             Shampoo.gameObject.SetActive(true);
         }
     }
@@ -112,10 +114,13 @@ public class PlayerStateController : MonoBehaviour
         if (Shampoo.gameObject.activeSelf) { return; }
         if (Mop.gameObject.activeSelf)
         {
+            FindObjectOfType<MopArea>().MopDropped();
             Mop.gameObject.SetActive(false);
         }
         else
         {
+
+            FindObjectOfType<MopArea>().MopPickedUp();
             Mop.gameObject.SetActive(true);
         }
     }

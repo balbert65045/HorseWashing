@@ -13,6 +13,8 @@ public class BouncyWall : MonoBehaviour
             float xDiff = transform.position.x - contact.point.x;
             float zDiff = transform.position.z - contact.point.z;
 
+          //  if(Mathf.)
+
             collision.gameObject.GetComponent<PlayerMovement>().Bounce();
         }
     }
