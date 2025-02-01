@@ -484,8 +484,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd09050245bb124b9c1b7592be93b7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Renderer: {fileID: 8016861970488318392}
+  m_happyMaterial: {fileID: 2100000, guid: eee5c4bc803d2e54a8ef85a9c935f92e, type: 2}
+  m_neutralMaterial: {fileID: 2100000, guid: edea3a3ba200da644945eca2f5a704a3, type: 2}
+  m_MadMaterial: {fileID: 2100000, guid: cbdfa8446e6ac744391b06d5c6fd207b, type: 2}
   CurrentInteractionAmount: 0
   MaxInteractionAmount: 10
+  horseHolding: {fileID: 0}
 --- !u!1 &5363922038300465830
 GameObject:
   m_ObjectHideFlags: 0
