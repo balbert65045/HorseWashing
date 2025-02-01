@@ -10,4 +10,9 @@ public class LevelButton : MonoBehaviour
     {
         SceneManager.LoadScene(level);
     }
+
+    public void ReloadLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
 }

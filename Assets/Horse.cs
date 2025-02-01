@@ -15,6 +15,8 @@ public class Horse : MonoBehaviour
 
     public bool leaving = false;
     bool entered = false;
+
+    Animator animator;
     // Start is called before the first frame update
 
 
@@ -23,10 +25,12 @@ public class Horse : MonoBehaviour
     {
         horseAudio = GetComponentInChildren<HorseAudio>();
         agent = GetComponent<NavMeshAgent>();
+        animator = GetComponentInChildren<Animator>();
 
 
         StartCoroutine("PlayEnterAfterDelay");
         horseAudio.PlayWalking();
+        animator.SetBool("Walking", true);
         Exit = exit;
         Destination = DestinationStall;
         DestinationStall.SetOnWay();
@@ -60,6 +64,8 @@ public class Horse : MonoBehaviour
 
     void EnterStation()
     {
+        animator.SetBool("Walking", false);
+
         entered = true;
         horseAudio.StopWalking();
         agent.enabled = false;
@@ -68,6 +74,8 @@ public class Horse : MonoBehaviour
 
     public void BeginLeaving()
     {
+        animator.SetBool("Walking", true);
+
         entered = false;
 
         horseAudio.PlayWalking();

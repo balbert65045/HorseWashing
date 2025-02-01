@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Timer : MonoBehaviour
 {
-    [SerializeField] float GameTime = 120f;
+    float GameTime = 120f;
     TMP_Text timerText;
     // Start is called before the first frame update
     void Start()
@@ -13,6 +13,10 @@ public class Timer : MonoBehaviour
         timerText = GetComponent<TMP_Text>();
     }
 
+    public void SetTime(float time)
+    {
+        GameTime = time;
+    }
     string FormatTime(float time)
     {
         int min = Mathf.FloorToInt(time / 60f);

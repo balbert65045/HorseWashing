@@ -380,6 +380,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Horse_Placeholder
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 3777205aa71244349be4fab075c614a4, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 275470d5072140846839c152757d96d0, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

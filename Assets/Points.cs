@@ -6,7 +6,7 @@ using UnityEngine;
 public class Points : MonoBehaviour
 {
     TMP_Text PointsText;
-    int currentPoints = 0;
+    public int currentPoints = 0;
     // Start is called before the first frame update
     void Start()
     {
