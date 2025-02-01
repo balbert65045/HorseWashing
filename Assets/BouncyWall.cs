@@ -13,9 +13,13 @@ public class BouncyWall : MonoBehaviour
             float xDiff = transform.position.x - contact.point.x;
             float zDiff = transform.position.z - contact.point.z;
 
-          //  if(Mathf.)
+            bool xReflect = false;
+            if(Mathf.Abs(xDiff) > Mathf.Abs(zDiff))
+            {
+                xReflect = true;
+            }
 
-            collision.gameObject.GetComponent<PlayerMovement>().Bounce();
+            collision.gameObject.GetComponent<PlayerMovement>().Bounce(xReflect);
         }
     }
     // Start is called before the first frame update

@@ -38,9 +38,18 @@ public class PlayerMovement : MonoBehaviour
         return slideAreasInside.Count > 0;
     }
 
-    public void Bounce()
+    public void Bounce(bool xReflect)
     {
-
+        if (!xReflect)
+        {
+            Debug.Log("Reflect X");
+            moveDirection = new Vector3(-moveDirection.x, 0, moveDirection.z);
+        }
+        else
+        {
+            Debug.Log("Reflect Z");
+            moveDirection = new Vector3(moveDirection.x, 0, -moveDirection.z);
+        }
     }
 
     public void SetSlide(bool value, SlideArea slideArea)
