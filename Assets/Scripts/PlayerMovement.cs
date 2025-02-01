@@ -38,6 +38,11 @@ public class PlayerMovement : MonoBehaviour
         return slideAreasInside.Count > 0;
     }
 
+    public void Bounce()
+    {
+
+    }
+
     public void SetSlide(bool value, SlideArea slideArea)
     {
         if (value)

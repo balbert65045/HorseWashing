@@ -364,9 +364,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1484884618}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 675, y: 437}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -225, y: -57}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &165141560
@@ -985,6 +985,7 @@ GameObject:
   - component: {fileID: 300008947}
   - component: {fileID: 300008946}
   - component: {fileID: 300008945}
+  - component: {fileID: 300008948}
   m_Layer: 0
   m_Name: Walls (3)
   m_TagString: Untagged
@@ -1078,6 +1079,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 300008943}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &300008948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 300008943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcc024b397ae0cc40a39440bf689886d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &302527729 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5081213249841029164, guid: f1f8a2059a5efb4459f3c0ea652c1700, type: 3}
@@ -1200,6 +1213,7 @@ GameObject:
   - component: {fileID: 478023700}
   - component: {fileID: 478023699}
   - component: {fileID: 478023698}
+  - component: {fileID: 478023702}
   m_Layer: 0
   m_Name: Walls (2)
   m_TagString: Untagged
@@ -1293,6 +1307,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 810126305}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &478023702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 478023697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcc024b397ae0cc40a39440bf689886d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &509519833 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5081213249841029164, guid: f1f8a2059a5efb4459f3c0ea652c1700, type: 3}
@@ -1886,6 +1912,7 @@ GameObject:
   - component: {fileID: 859542801}
   - component: {fileID: 859542800}
   - component: {fileID: 859542799}
+  - component: {fileID: 859542803}
   m_Layer: 0
   m_Name: Walls (1)
   m_TagString: Untagged
@@ -1979,6 +2006,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 810126305}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &859542803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 859542798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcc024b397ae0cc40a39440bf689886d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &893250994
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2126,7 +2165,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &944804270
 Transform:
   m_ObjectHideFlags: 0
@@ -2772,8 +2811,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74f88f1b57cc6c04b82ebfac9d3556c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Panel: {fileID: 0}
-  ScoreText: {fileID: 0}
+  Panel: {fileID: 1929053931}
+  ScoreText: {fileID: 565207155}
 --- !u!1 &1371678039
 GameObject:
   m_ObjectHideFlags: 0
@@ -2839,10 +2878,10 @@ MonoBehaviour:
   Decelleration: 4000
   SlideAcceleration: 1000
   SlideDeceleration: 1000
-  SlideMoveSpeed: 1000
+  SlideMoveSpeed: 2000
   MoveSpeed: 500
   DashTime: 0.2
-  DashCooldown: 2
+  DashCooldown: 1
 --- !u!136 &1371678042
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3845,6 +3884,7 @@ GameObject:
   - component: {fileID: 1906569829}
   - component: {fileID: 1906569828}
   - component: {fileID: 1906569827}
+  - component: {fileID: 1906569831}
   m_Layer: 0
   m_Name: Walls
   m_TagString: Untagged
@@ -3938,6 +3978,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 810126305}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1906569831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1906569826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcc024b397ae0cc40a39440bf689886d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1929053931
 GameObject:
   m_ObjectHideFlags: 0
@@ -4175,6 +4227,7 @@ GameObject:
   - component: {fileID: 1954569827}
   - component: {fileID: 1954569826}
   - component: {fileID: 1954569825}
+  - component: {fileID: 1954569828}
   m_Layer: 0
   m_Name: Walls (4)
   m_TagString: Untagged
@@ -4268,6 +4321,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1954569823}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1954569828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1954569823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcc024b397ae0cc40a39440bf689886d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2006211884
 GameObject:
   m_ObjectHideFlags: 0
@@ -4691,9 +4756,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1484884618}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -716, y: 437}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 184, y: -57}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2138149278
@@ -5022,6 +5087,10 @@ PrefabInstance:
     - target: {fileID: 7677123573341006963, guid: 1860fe66a58486f449c57caa4f327fc6, type: 3}
       propertyPath: m_Name
       value: Horse
+      objectReference: {fileID: 0}
+    - target: {fileID: 7677123573341006963, guid: 1860fe66a58486f449c57caa4f327fc6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
