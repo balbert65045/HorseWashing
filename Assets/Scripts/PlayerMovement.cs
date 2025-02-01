@@ -33,6 +33,11 @@ public class PlayerMovement : MonoBehaviour
 //    Animator animator;
     List<SlideArea> slideAreasInside = new List<SlideArea>();
 
+    public bool inSlideArea()
+    {
+        return slideAreasInside.Count > 0;
+    }
+
     public void SetSlide(bool value, SlideArea slideArea)
     {
         if (value)

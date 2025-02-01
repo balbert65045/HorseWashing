@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class PlayerStateController : MonoBehaviour
 {
+    [SerializeField] GameObject wetAreaPrefab;
+    [SerializeField] float WetRate = 2f;
+    float timeSinceLastWet = 0;
+    float timeInDry = 0;
+
     [SerializeField] GameObject Shampoo;
     [SerializeField] GameObject Mop;
 
@@ -11,9 +16,20 @@ public class PlayerStateController : MonoBehaviour
     bool canDropPickupMop = false;
     StationArea currentStationToInteractWith;
 
+    PlayerMovement pm;
+    private void Start()
+    {
+        pm = GetComponent<PlayerMovement>();
+    }
+
     public bool HoldingMop()
     {
         return Mop.activeSelf;
+    }
+
+    bool HoldingShampoo()
+    {
+        return Shampoo.activeSelf;
     }
 
     public void EnableGrabDropShampoo(bool enable)
@@ -49,8 +65,24 @@ public class PlayerStateController : MonoBehaviour
                 InteractWithStation();
             }
         }
+
+
+        if (HoldingShampoo() && !pm.inSlideArea())
+        {
+            SpawnSlideArea();
+        }
     }
 
+    void SpawnSlideArea()
+    {
+        timeInDry += Time.deltaTime;
+        float randomTime = Random.Range(WetRate, WetRate * 2);
+        if (timeInDry > timeSinceLastWet + randomTime)
+        {
+            timeSinceLastWet = timeInDry;
+            Instantiate(wetAreaPrefab, new Vector3(transform.position.x, -1.2f, transform.position.z), Quaternion.identity);
+        }
+    }
 
     void InteractWithStation()
     {
