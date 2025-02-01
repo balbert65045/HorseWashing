@@ -151,8 +151,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 507976496}
   - {fileID: 727893017}
+  - {fileID: 507976496}
   - {fileID: 1665465706}
   - {fileID: 1881625671}
   - {fileID: 365720974}
@@ -533,6 +533,7 @@ GameObject:
   - component: {fileID: 177279460}
   - component: {fileID: 177279459}
   - component: {fileID: 177279458}
+  - component: {fileID: 177279461}
   m_Layer: 0
   m_Name: Cube (4)
   m_TagString: Untagged
@@ -626,6 +627,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 177279456}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &177279461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 177279456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcc024b397ae0cc40a39440bf689886d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BounceCoefficient: 1.3
 --- !u!1 &190158282
 GameObject:
   m_ObjectHideFlags: 0
@@ -1034,7 +1048,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 5, y: 5, z: 5}
+  m_Size: {x: 7, y: 7, z: 7}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &269330641
 Transform:
@@ -1269,6 +1283,7 @@ GameObject:
   - component: {fileID: 365720977}
   - component: {fileID: 365720976}
   - component: {fileID: 365720975}
+  - component: {fileID: 365720978}
   m_Layer: 0
   m_Name: Cube (9)
   m_TagString: Untagged
@@ -1362,6 +1377,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 365720973}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &365720978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 365720973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcc024b397ae0cc40a39440bf689886d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BounceCoefficient: 1.3
 --- !u!1 &400042569
 GameObject:
   m_ObjectHideFlags: 0
@@ -1584,6 +1612,7 @@ GameObject:
   - component: {fileID: 507976499}
   - component: {fileID: 507976498}
   - component: {fileID: 507976497}
+  - component: {fileID: 507976500}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -1677,6 +1706,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 507976495}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &507976500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507976495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcc024b397ae0cc40a39440bf689886d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BounceCoefficient: 1.3
 --- !u!4 &509519833 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5081213249841029164, guid: f1f8a2059a5efb4459f3c0ea652c1700, type: 3}
@@ -1859,6 +1901,7 @@ GameObject:
   - component: {fileID: 584306431}
   - component: {fileID: 584306430}
   - component: {fileID: 584306429}
+  - component: {fileID: 584306432}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -1952,6 +1995,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 584306427}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &584306432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 584306427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcc024b397ae0cc40a39440bf689886d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BounceCoefficient: 1.3
 --- !u!1 &588779086
 GameObject:
   m_ObjectHideFlags: 0
@@ -2337,6 +2393,7 @@ GameObject:
   - component: {fileID: 727893020}
   - component: {fileID: 727893019}
   - component: {fileID: 727893018}
+  - component: {fileID: 727893021}
   m_Layer: 0
   m_Name: Cube (2)
   m_TagString: Untagged
@@ -2430,6 +2487,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 727893016}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &727893021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 727893016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcc024b397ae0cc40a39440bf689886d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BounceCoefficient: 1.3
 --- !u!1 &767952400
 GameObject:
   m_ObjectHideFlags: 0
@@ -2442,6 +2512,7 @@ GameObject:
   - component: {fileID: 767952404}
   - component: {fileID: 767952403}
   - component: {fileID: 767952402}
+  - component: {fileID: 767952405}
   m_Layer: 0
   m_Name: Cube (6)
   m_TagString: Untagged
@@ -2535,6 +2606,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 767952400}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &767952405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 767952400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcc024b397ae0cc40a39440bf689886d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BounceCoefficient: 1.5
 --- !u!1 &810126304
 GameObject:
   m_ObjectHideFlags: 0
@@ -2906,6 +2990,7 @@ GameObject:
   - component: {fileID: 914989667}
   - component: {fileID: 914989666}
   - component: {fileID: 914989665}
+  - component: {fileID: 914989668}
   m_Layer: 0
   m_Name: Cube (3)
   m_TagString: Untagged
@@ -2999,6 +3084,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 914989663}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &914989668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 914989663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcc024b397ae0cc40a39440bf689886d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BounceCoefficient: 1.3
 --- !u!1 &922767873
 GameObject:
   m_ObjectHideFlags: 0
@@ -3011,6 +3109,7 @@ GameObject:
   - component: {fileID: 922767877}
   - component: {fileID: 922767876}
   - component: {fileID: 922767875}
+  - component: {fileID: 922767878}
   m_Layer: 0
   m_Name: Cube (5)
   m_TagString: Untagged
@@ -3104,6 +3203,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 922767873}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &922767878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 922767873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcc024b397ae0cc40a39440bf689886d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BounceCoefficient: 1.5
 --- !u!1 &944804269
 GameObject:
   m_ObjectHideFlags: 0
@@ -3807,6 +3919,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9adbd4633e01cd4896c9025dd633eab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AbsoluteMaxSpeed: 3000
   Acceleration: 4000
   Decelleration: 4000
   SlideAcceleration: 1000
@@ -4171,6 +4284,7 @@ GameObject:
   - component: {fileID: 1620345195}
   - component: {fileID: 1620345194}
   - component: {fileID: 1620345193}
+  - component: {fileID: 1620345197}
   m_Layer: 0
   m_Name: Shampoo
   m_TagString: Untagged
@@ -4265,6 +4379,19 @@ Transform:
   - {fileID: 1036582704}
   m_Father: {fileID: 269330641}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1620345197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620345192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcc024b397ae0cc40a39440bf689886d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BounceCoefficient: 1.3
 --- !u!1 &1632297253
 GameObject:
   m_ObjectHideFlags: 0
@@ -4322,6 +4449,7 @@ GameObject:
   - component: {fileID: 1665465709}
   - component: {fileID: 1665465708}
   - component: {fileID: 1665465707}
+  - component: {fileID: 1665465710}
   m_Layer: 0
   m_Name: Cube (7)
   m_TagString: Untagged
@@ -4415,6 +4543,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1665465705}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1665465710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1665465705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcc024b397ae0cc40a39440bf689886d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BounceCoefficient: 1.3
 --- !u!1 &1748211259
 GameObject:
   m_ObjectHideFlags: 0
@@ -5115,6 +5256,7 @@ GameObject:
   - component: {fileID: 1881625674}
   - component: {fileID: 1881625673}
   - component: {fileID: 1881625672}
+  - component: {fileID: 1881625675}
   m_Layer: 0
   m_Name: Cube (8)
   m_TagString: Untagged
@@ -5208,6 +5350,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1881625670}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1881625675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1881625670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcc024b397ae0cc40a39440bf689886d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BounceCoefficient: 1.3
 --- !u!1 &1906569826
 GameObject:
   m_ObjectHideFlags: 0
@@ -5995,6 +6150,7 @@ GameObject:
   - component: {fileID: 2032134811}
   - component: {fileID: 2032134810}
   - component: {fileID: 2032134809}
+  - component: {fileID: 2032134812}
   m_Layer: 0
   m_Name: Cube (10)
   m_TagString: Untagged
@@ -6088,6 +6244,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2032134807}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2032134812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2032134807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcc024b397ae0cc40a39440bf689886d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BounceCoefficient: 1.3
 --- !u!1 &2042800225
 GameObject:
   m_ObjectHideFlags: 0
@@ -6166,6 +6335,7 @@ GameObject:
   - component: {fileID: 2064071603}
   - component: {fileID: 2064071602}
   - component: {fileID: 2064071601}
+  - component: {fileID: 2064071605}
   m_Layer: 0
   m_Name: Mop
   m_TagString: Untagged
@@ -6260,6 +6430,19 @@ Transform:
   - {fileID: 276014919}
   m_Father: {fileID: 2116139936}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2064071605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2064071600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcc024b397ae0cc40a39440bf689886d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BounceCoefficient: 1.3
 --- !u!1001 &2074465082
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6383,7 +6566,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 5, y: 5, z: 5}
+  m_Size: {x: 7, y: 7, z: 7}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &2116139936
 Transform:

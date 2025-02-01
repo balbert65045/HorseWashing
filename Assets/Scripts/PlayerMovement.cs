@@ -5,6 +5,7 @@ using UnityEngine.EventSystems;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [SerializeField] float AbsoluteMaxSpeed = 100f;
     //[SerializeField] AudioSource MovingAudio;
     [SerializeField] float Acceleration = 1f;
     [SerializeField] float Decelleration = 1f;
@@ -38,18 +39,10 @@ public class PlayerMovement : MonoBehaviour
         return slideAreasInside.Count > 0;
     }
 
-    public void Bounce(bool xReflect)
+    public void Bounce(Vector3 dir, float bounceCoefficient)
     {
-        if (!xReflect)
-        {
-            Debug.Log("Reflect X");
-            moveDirection = new Vector3(-moveDirection.x, 0, moveDirection.z);
-        }
-        else
-        {
-            Debug.Log("Reflect Z");
-            moveDirection = new Vector3(moveDirection.x, 0, -moveDirection.z);
-        }
+        float speedAmount = Mathf.Clamp(moveDirection.magnitude * bounceCoefficient, 0, AbsoluteMaxSpeed);
+        moveDirection = speedAmount * dir.normalized;
     }
 
     public void SetSlide(bool value, SlideArea slideArea)
