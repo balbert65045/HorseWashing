@@ -7,11 +7,23 @@ public class HorseSpawner : MonoBehaviour
     [SerializeField] GameObject Exit;
     [SerializeField] GameObject HorsePrefab;
     [SerializeField] float TimeUntilHorseSpawn = 5f;
+    [SerializeField] float IncreaseTime = 20f;
+    [SerializeField] float LastCallTime = 110f;
+
 
     float lastHorseSpawnedTime = -100000;
 
+
+
     void Update()
     {
+        if(Time.time > IncreaseTime)
+        {
+            TimeUntilHorseSpawn -= 3f;
+            IncreaseTime += IncreaseTime;
+        }
+
+        if (Time.time > LastCallTime) { return; }
         if (Time.time > lastHorseSpawnedTime + TimeUntilHorseSpawn)
         {
             SpawnHose();
@@ -20,13 +32,16 @@ public class HorseSpawner : MonoBehaviour
 
     void SpawnHose()
     {
-        lastHorseSpawnedTime = Time.time;
-        GameObject spawnedHorse = Instantiate(HorsePrefab, transform.position, Quaternion.Euler(new Vector3(0, 180, 0)));
         StationAreaController stationAreaController = FindObjectOfType<StationAreaController>();
-        if(stationAreaController.GetAvailableStationArea() == null) {
+
+        if (stationAreaController.GetAvailableStationArea() == null)
+        {
             // Have the horse wait??
             return;
         }
+        lastHorseSpawnedTime = Time.time;
+        GameObject spawnedHorse = Instantiate(HorsePrefab, transform.position, Quaternion.Euler(new Vector3(0, 180, 0)));
+
         spawnedHorse.GetComponent<Horse>().SetDestination(stationAreaController.GetAvailableStationArea(), Exit);
 
     }

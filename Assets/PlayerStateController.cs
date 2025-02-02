@@ -11,9 +11,12 @@ public class PlayerStateController : MonoBehaviour
 
     [SerializeField] GameObject Shampoo;
     [SerializeField] GameObject Mop;
+    [SerializeField] GameObject Carrot;
+
 
     bool canDropPickupShampoo = false;
     bool canDropPickupMop = false;
+    bool canDropPickupCarrot = false;
     StationArea currentStationToInteractWith;
 
     PlayerMovement pm;
@@ -39,6 +42,11 @@ public class PlayerStateController : MonoBehaviour
         return Shampoo.activeSelf;
     }
 
+    public void EnableGrabPickupCarrot(bool enable)
+    {
+        canDropPickupCarrot = enable;
+    }
+
     public void EnableGrabDropShampoo(bool enable)
     {
         canDropPickupShampoo = enable;
@@ -54,12 +62,21 @@ public class PlayerStateController : MonoBehaviour
         currentStationToInteractWith = station;
     }
 
+    public void LetGoOfCarrot()
+    {
+        Carrot.SetActive(false);
+    }
+
     // Update is called once per frame
     void Update()
     {
         if (finished) { return; }
         if(Input.GetKeyDown(KeyCode.Return))
         {
+            if (canDropPickupCarrot)
+            {
+                DropPickupCarrot();
+            }
             if (canDropPickupShampoo)
             {
                 DropPickupShampoo();
@@ -71,6 +88,11 @@ public class PlayerStateController : MonoBehaviour
             if(currentStationToInteractWith != null && Shampoo.gameObject.activeSelf)
             {
                 InteractWithStation();
+            }
+
+            if(currentStationToInteractWith != null && Carrot.gameObject.activeSelf)
+            {
+                FeedStation();
             }
         }
 
@@ -94,8 +116,28 @@ public class PlayerStateController : MonoBehaviour
         currentStationToInteractWith.Interact();
     }
 
+    void FeedStation()
+    {
+        currentStationToInteractWith.Feed();
+    }
+
+    void DropPickupCarrot()
+    {
+        if (Shampoo.gameObject.activeSelf) { return; }
+        if (Mop.gameObject.activeSelf) { return; }
+        if (Carrot.gameObject.activeSelf)
+        {
+            Carrot.gameObject.SetActive(false);
+        }
+        else
+        {
+            Carrot.gameObject.SetActive(true);
+        }
+    }
+
     void DropPickupShampoo()
     {
+        if (Carrot.gameObject.activeSelf) { return; }
         if (Mop.gameObject.activeSelf) { return; }
         if (Shampoo.gameObject.activeSelf)
         {
@@ -111,6 +153,7 @@ public class PlayerStateController : MonoBehaviour
 
     void DropPickupMop()
     {
+        if (Carrot.gameObject.activeSelf) { return; }
         if (Shampoo.gameObject.activeSelf) { return; }
         if (Mop.gameObject.activeSelf)
         {

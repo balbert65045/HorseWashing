@@ -139,6 +139,15 @@ public class StationArea : MonoBehaviour
         }
     }
 
+    public void Feed()
+    {
+        if (horseHolding == null) { return; }
+        if (!horseHolding.hungry) { return; }
+        horseHolding.Eat();
+        FindObjectOfType<Points>().AddPoints(5);
+        FindObjectOfType<PlayerStateController>().LetGoOfCarrot();
+    }
+
     public void FinishCleaningHorse()
     {
         FindObjectOfType<Points>().AddPoints(10);
