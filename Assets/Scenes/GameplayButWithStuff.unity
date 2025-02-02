@@ -19148,7 +19148,7 @@ Transform:
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
   m_LocalRotation: {x: 0.44308, y: -0, z: -0, w: 0.8964821}
-  m_LocalPosition: {x: 0, y: 21.47, z: -23.64}
+  m_LocalPosition: {x: 0, y: 21.47, z: -22.54}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -23472,7 +23472,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 41e860778eaa4774ea34bc2dff33e89b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.9
+      value: -1.13
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 41e860778eaa4774ea34bc2dff33e89b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -23514,6 +23514,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RoomStaticMesh
       objectReference: {fileID: 0}
+    - target: {fileID: 4949419839257681195, guid: 41e860778eaa4774ea34bc2dff33e89b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 77938046a225a3d4b84f3e42404cb0fb, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
