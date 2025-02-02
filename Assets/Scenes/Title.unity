@@ -377,7 +377,7 @@ MonoBehaviour:
   m_text: Play
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cd16d498bf872d24f86dd2ba4503b9e9, type: 2}
-  m_sharedMaterial: {fileID: 6532612257560528032, guid: cd16d498bf872d24f86dd2ba4503b9e9, type: 2}
+  m_sharedMaterial: {fileID: 4587036286616047827, guid: cd16d498bf872d24f86dd2ba4503b9e9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -511,7 +511,7 @@ MonoBehaviour:
   m_text: Salon Saloon
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cd16d498bf872d24f86dd2ba4503b9e9, type: 2}
-  m_sharedMaterial: {fileID: 6532612257560528032, guid: cd16d498bf872d24f86dd2ba4503b9e9, type: 2}
+  m_sharedMaterial: {fileID: 4587036286616047827, guid: cd16d498bf872d24f86dd2ba4503b9e9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1103,7 +1103,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 4353413860596615627, guid: f392ff18f9f40b440921c449e5ae1eb4, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f392ff18f9f40b440921c449e5ae1eb4, type: 3}
