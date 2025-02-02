@@ -54,11 +54,19 @@ public class PlayerMovement : MonoBehaviour
         moveDirection = speedAmount * dir.normalized;
     }
 
+    float lastSlipTime = 0;
     public void SetSlide(bool value, SlideArea slideArea)
     {
         if (value)
         {
-            //GetComponent<PlayerAudio>().PlaySlipAudio();
+            if (!isDashing && moveDirection.magnitude > 1000)
+            {
+                if(Time.timeSinceLevelLoad > lastSlipTime + 2)
+                {
+                    lastSlipTime = Time.timeSinceLevelLoad;
+                    GetComponent<PlayerAudio>().PlaySlipAudio();
+                }
+            }
             if (slideAreasInside.Count == 0)
             {
                 currentAcceleration = SlideAcceleration;

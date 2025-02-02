@@ -13,6 +13,9 @@ public enum HorseState
 
 public class StationArea : MonoBehaviour
 {
+
+    [SerializeField] GameObject Happy;
+    [SerializeField] GameObject Angry;
     [SerializeField] bool Left = false;
     [SerializeField] SlipperyStateArea SliperyArea;
 
@@ -52,7 +55,7 @@ public class StationArea : MonoBehaviour
 
     private void Update()
     {
-        if(shampooing && Time.time > LastShampooed + ShampooTime)
+        if(shampooing && Time.timeSinceLevelLoad > LastShampooed + ShampooTime)
         {
             shampooing = false;
             Shampooing.Stop();
@@ -65,23 +68,25 @@ public class StationArea : MonoBehaviour
             switch (currentState)
             {
                 case HorseState.Happy:
-                    if (Time.time - TimeSinceEnteringChair > angerStepThreshold)
+                    if (Time.timeSinceLevelLoad - TimeSinceEnteringChair > angerStepThreshold)
                     {
                         m_Renderer.material = m_neutralMaterial;
                         currentState = HorseState.Neutral;
                     }
                     break;
                 case HorseState.Neutral:
-                    if (Time.time - TimeSinceEnteringChair > angerStepThreshold * 2)
+                    if (Time.timeSinceLevelLoad - TimeSinceEnteringChair > angerStepThreshold * 2)
                     {
                         stationAudio.PlayHorseGettingMad();
+                        Happy.gameObject.SetActive(false);
+                        Angry.gameObject.SetActive(true);
 
                         m_Renderer.material = m_MadMaterial;
                         currentState = HorseState.Mad;
                     }
                     break;
                 case HorseState.Mad:
-                    if (Time.time - TimeSinceEnteringChair > angerStepThreshold * 3)
+                    if (Time.timeSinceLevelLoad - TimeSinceEnteringChair > angerStepThreshold * 3)
                     {
                         LeaveMad();
                     }
@@ -104,6 +109,8 @@ public class StationArea : MonoBehaviour
 
     void Leave()
     {
+        Happy.gameObject.SetActive(false);
+        Angry.gameObject.SetActive(false);
         stationAudio.PlayHorseLeavingAudio();
         CurrentInteractionAmount = 0;
         horseHolding.gameObject.SetActive(true);
@@ -145,7 +152,7 @@ public class StationArea : MonoBehaviour
         Shampooing.Play();
         Bubbles.Play();
         shampooing = true;
-        LastShampooed = Time.time;
+        LastShampooed = Time.timeSinceLevelLoad;
         FindObjectOfType<PlayerAudio>().PlayLather();
         bool finished = CurrentInteractionAmount == MaxInteractionAmount;
         if(OnStationInteract != null)
@@ -175,7 +182,7 @@ public class StationArea : MonoBehaviour
         {
             FindObjectOfType<Points>().AddPoints(10);
         }
-
+        AudioManager.instance.PlaySuccess();
         IncreaseSlipperyArea();
         //Give points
         Leave();
@@ -190,11 +197,12 @@ public class StationArea : MonoBehaviour
     public void HoldHorse(Horse horse)
     {
         stationAudio.PlayHorseEntering();
-
+        Happy.gameObject.SetActive(true);
+        Angry.gameObject.SetActive(false);
 
         currentState = HorseState.Happy;
         horseHolding = horse;
-        TimeSinceEnteringChair = Time.time;
+        TimeSinceEnteringChair = Time.timeSinceLevelLoad;
 
 
         m_Renderer.material = m_happyMaterial;

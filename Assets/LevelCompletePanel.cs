@@ -33,7 +33,16 @@ public class LevelCompletePanel : MonoBehaviour
         Panel.SetActive(true);
         Points points = FindObjectOfType<Points>();
         ScoreText.text = points.currentPoints.ToString();
-        if(points.currentPoints > pointsFor1Carrot)
+        FindObjectOfType<LevelMusic>().StopMusic();
+        if (points.currentPoints < pointsFor1Carrot)
+        {
+            AudioManager.instance.PlayLoseSound();
+        }
+        else
+        {
+            AudioManager.instance.PlayWinSound();
+        }
+        if (points.currentPoints > pointsFor1Carrot)
         {
             carrot1.color = Color.white;
         }
