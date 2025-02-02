@@ -2848,6 +2848,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -41.701
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: da8ca6e95f00548009909b7794f00e01, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 77938046a225a3d4b84f3e42404cb0fb, type: 2}
     - target: {fileID: 919132149155446097, guid: da8ca6e95f00548009909b7794f00e01, type: 3}
       propertyPath: m_Name
       value: MopStaticMesh
@@ -4857,6 +4861,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 5032808854e914f1786296a9cebb6247, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 77938046a225a3d4b84f3e42404cb0fb, type: 2}
     - target: {fileID: 919132149155446097, guid: 5032808854e914f1786296a9cebb6247, type: 3}
       propertyPath: m_Name
       value: ShampooStaticMesh
@@ -8164,7 +8172,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 41e860778eaa4774ea34bc2dff33e89b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 4ba422d3ccc5d3c42a3aa2a9d2874bd2, type: 2}
+      objectReference: {fileID: 2100000, guid: 77938046a225a3d4b84f3e42404cb0fb, type: 2}
     - target: {fileID: 919132149155446097, guid: 41e860778eaa4774ea34bc2dff33e89b, type: 3}
       propertyPath: m_Name
       value: RoomStaticMesh
