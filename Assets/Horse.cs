@@ -19,6 +19,7 @@ public class Horse : MonoBehaviour
         hungry = false;
         //Play audio
         horseAudio.PlayEat();
+        AngerTime += AngerTime;
     }
 
     public bool leaving = false;
