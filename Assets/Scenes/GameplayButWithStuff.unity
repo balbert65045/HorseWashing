@@ -1009,7 +1009,7 @@ GameObject:
   - component: {fileID: 269330641}
   - component: {fileID: 269330640}
   - component: {fileID: 269330639}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ShampooArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1048,7 +1048,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 7, y: 7, z: 5}
+  m_Size: {x: 3, y: 3, z: 3}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &269330641
 Transform:
@@ -1494,7 +1494,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &368225854
 Transform:
   m_ObjectHideFlags: 0
@@ -1862,7 +1862,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &496050023
 Transform:
   m_ObjectHideFlags: 0
@@ -2801,7 +2801,7 @@ GameObject:
   - component: {fileID: 607184085}
   - component: {fileID: 607184084}
   - component: {fileID: 607184086}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CarrotArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2827,7 +2827,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 7, y: 7, z: 5}
+  m_Size: {x: 3, y: 3, z: 3}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &607184085
 Transform:
@@ -4763,7 +4763,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1050967667
 Transform:
   m_ObjectHideFlags: 0
@@ -5691,6 +5691,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d63d94aa24f6b8444b24fe7ba326961f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 128
   wetAreaPrefab: {fileID: 4141983655960142265, guid: 68050d031b4f4f9438e02e5c92b75d72, type: 3}
   Shampoo: {fileID: 573883444}
   Mop: {fileID: 339532756}
@@ -5727,7 +5730,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1396979373
 Transform:
   m_ObjectHideFlags: 0
@@ -7691,7 +7694,7 @@ MonoBehaviour:
   HorsePrefab: {fileID: 7677123573341006963, guid: 1860fe66a58486f449c57caa4f327fc6, type: 3}
   TimeUntilHorseSpawn: 10
   IncreaseTime: 25
-  LastCallTime: 95
+  LastCallTime: 100
 --- !u!4 &2006211886
 Transform:
   m_ObjectHideFlags: 0
@@ -8201,7 +8204,7 @@ GameObject:
   - component: {fileID: 2116139936}
   - component: {fileID: 2116139935}
   - component: {fileID: 2116139934}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MopArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8240,7 +8243,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 7, y: 7, z: 5}
+  m_Size: {x: 3, y: 3, z: 3}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &2116139936
 Transform:

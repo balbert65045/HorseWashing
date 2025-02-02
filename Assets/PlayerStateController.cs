@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerStateController : MonoBehaviour
 {
+
+    [SerializeField] LayerMask layerMask;
     [SerializeField] GameObject wetAreaPrefab;
     //[SerializeField] float WetRate = 2f;
     //float timeSinceLastWet = 0;
@@ -73,18 +75,36 @@ public class PlayerStateController : MonoBehaviour
         if (finished) { return; }
         if(Input.GetKeyDown(KeyCode.Return))
         {
-            if (canDropPickupCarrot)
+            RaycastHit hit;
+            Physics.Raycast(transform.position, transform.forward, out hit, 7f, layerMask);
+            if(hit.transform != null)
             {
-                DropPickupCarrot();
+                if(hit.transform.GetComponent<CarrotArea>() != null)
+                {
+                    DropPickupCarrot();
+                }
+                if(hit.transform.GetComponent<ShampooArea>() != null)
+                {
+                    DropPickupShampoo();
+                }
+                if(hit.transform.GetComponent<MopArea>() != null)
+                {
+                    DropPickupMop();
+                }
             }
-            if (canDropPickupShampoo)
-            {
-                DropPickupShampoo();
-            }
-            if (canDropPickupMop)
-            {
-                DropPickupMop();
-            }
+            //Debug.Log(hit.transform.name);
+            //if (canDropPickupCarrot)
+            //{
+            //    DropPickupCarrot();
+            //}
+            //if (canDropPickupShampoo)
+            //{
+            //    DropPickupShampoo();
+            //}
+            //if (canDropPickupMop)
+            //{
+            //    DropPickupMop();
+            //}
             if(currentStationToInteractWith != null && Shampoo.gameObject.activeSelf)
             {
                 InteractWithStation();

@@ -453,7 +453,7 @@ MonoBehaviour:
   EnterCharDistance: 1.7
   Destination: {fileID: 0}
   Exit: {fileID: 0}
-  AngerTime: 15
+  AngerTime: 17
   hungry: 1
   leaving: 0
 --- !u!114 &1587134931468226763
