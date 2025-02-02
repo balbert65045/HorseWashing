@@ -18,6 +18,7 @@ public class GameplayController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Time.timeScale == 0) { return; }
         float timeLeft = GameplayTime - Time.timeSinceLevelLoad;
         if (timeLeft < 0)
         {
