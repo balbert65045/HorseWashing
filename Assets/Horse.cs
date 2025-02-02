@@ -20,6 +20,20 @@ public class Horse : MonoBehaviour
     // Start is called before the first frame update
 
 
+    private void Start()
+    {
+        FindObjectOfType<GameplayController>().OnLevelComplete += OnLevelComplete;
+    }
+
+    private void OnDestroy()
+    {
+        FindObjectOfType<GameplayController>().OnLevelComplete -= OnLevelComplete;
+    }
+
+    void OnLevelComplete()
+    {
+        horseAudio.StopWalking();
+    }
 
     public void SetDestination(StationArea DestinationStall, GameObject exit)
     {

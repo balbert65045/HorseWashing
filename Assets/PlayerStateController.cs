@@ -17,9 +17,16 @@ public class PlayerStateController : MonoBehaviour
     StationArea currentStationToInteractWith;
 
     PlayerMovement pm;
+    bool finished = false;
     private void Start()
     {
         pm = GetComponent<PlayerMovement>();
+        FindObjectOfType<GameplayController>().OnLevelComplete += OnLevelComplete;
+    }
+
+    void OnLevelComplete()
+    {
+        finished = true;
     }
 
     public bool HoldingMop()
@@ -50,6 +57,7 @@ public class PlayerStateController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (finished) { return; }
         if(Input.GetKeyDown(KeyCode.Return))
         {
             if (canDropPickupShampoo)
@@ -91,10 +99,12 @@ public class PlayerStateController : MonoBehaviour
         if (Mop.gameObject.activeSelf) { return; }
         if (Shampoo.gameObject.activeSelf)
         {
+            FindObjectOfType<ShampooArea>().ShampooDropped();
             Shampoo.gameObject.SetActive(false);
         }
         else
         {
+            FindObjectOfType<ShampooArea>().ShampooPickedUp();
             Shampoo.gameObject.SetActive(true);
         }
     }
@@ -104,10 +114,13 @@ public class PlayerStateController : MonoBehaviour
         if (Shampoo.gameObject.activeSelf) { return; }
         if (Mop.gameObject.activeSelf)
         {
+            FindObjectOfType<MopArea>().MopDropped();
             Mop.gameObject.SetActive(false);
         }
         else
         {
+
+            FindObjectOfType<MopArea>().MopPickedUp();
             Mop.gameObject.SetActive(true);
         }
     }

@@ -5,6 +5,9 @@ using UnityEngine.EventSystems;
 
 public class PlayerMovement : MonoBehaviour
 {
+
+    [SerializeField] Animator animator;
+    [SerializeField] float AbsoluteMaxSpeed = 100f;
     //[SerializeField] AudioSource MovingAudio;
     [SerializeField] float Acceleration = 1f;
     [SerializeField] float Decelleration = 1f;
@@ -36,6 +39,13 @@ public class PlayerMovement : MonoBehaviour
     public bool inSlideArea()
     {
         return slideAreasInside.Count > 0;
+    }
+
+    public void Bounce(Vector3 dir, float bounceCoefficient)
+    {
+        GetComponent<PlayerAudio>().PlayArf();
+        float speedAmount = Mathf.Clamp(moveDirection.magnitude * bounceCoefficient, 0, AbsoluteMaxSpeed);
+        moveDirection = speedAmount * dir.normalized;
     }
 
     public void SetSlide(bool value, SlideArea slideArea)
@@ -122,6 +132,7 @@ public class PlayerMovement : MonoBehaviour
         }
         if (moveDirection == Vector3.zero)
         {
+            animator.SetBool("Walking", false);
             /*
             if (MovingAudio.isPlaying)
             {
@@ -131,6 +142,8 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
+            animator.SetBool("Walking", true);
+
             /*
             if (!MovingAudio.isPlaying)
             {

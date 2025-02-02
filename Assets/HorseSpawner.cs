@@ -21,7 +21,7 @@ public class HorseSpawner : MonoBehaviour
     void SpawnHose()
     {
         lastHorseSpawnedTime = Time.time;
-        GameObject spawnedHorse = Instantiate(HorsePrefab, transform.position, Quaternion.identity);
+        GameObject spawnedHorse = Instantiate(HorsePrefab, transform.position, Quaternion.Euler(new Vector3(0, 180, 0)));
         StationAreaController stationAreaController = FindObjectOfType<StationAreaController>();
         if(stationAreaController.GetAvailableStationArea() == null) {
             // Have the horse wait??
