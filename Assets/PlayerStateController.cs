@@ -76,7 +76,7 @@ public class PlayerStateController : MonoBehaviour
     void Update()
     {
         if (finished) { return; }
-        if(Input.GetKeyDown(KeyCode.Return))
+        if(Input.GetKeyDown(KeyCode.Return) || Input.GetButtonDown("PickUp"))
         {
             RaycastHit hit;
             Physics.Raycast(transform.position, transform.forward, out hit, 7f, layerMask);
@@ -97,7 +97,7 @@ public class PlayerStateController : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) || Input.GetButtonDown("Interact"))
         {
             if (currentStationToInteractWith != null && Shampoo.gameObject.activeSelf)
             {

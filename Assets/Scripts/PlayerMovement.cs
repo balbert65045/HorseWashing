@@ -109,7 +109,7 @@ public class PlayerMovement : MonoBehaviour
 
             //animator.SetBool("IsMoving", false);
         }
-        if (Input.GetKeyDown(KeyCode.Space) && dashAvailable && !isDashing)
+        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetButtonDown("Dash")) && dashAvailable && !isDashing)
         {
             dashAvailable = false;
             isDashing = true;
