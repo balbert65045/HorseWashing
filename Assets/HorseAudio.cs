@@ -5,7 +5,9 @@ using UnityEngine;
 public class HorseAudio : MonoBehaviour
 {
     [SerializeField] AudioSource walkingAudio;
-    
+    [SerializeField] AudioSource EatCarrot;
+
+
     public void PlayWalking()
     {
         walkingAudio.Play();
@@ -13,6 +15,14 @@ public class HorseAudio : MonoBehaviour
 
     public void StopWalking()
     {
-        walkingAudio.Stop();
+        if(walkingAudio != null)
+        {
+            walkingAudio.Stop();
+        }
+    }
+
+    public void PlayEat()
+    {
+        EatCarrot.Play();
     }
 }

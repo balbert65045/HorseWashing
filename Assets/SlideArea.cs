@@ -10,6 +10,7 @@ public class SlideArea : MonoBehaviour
         {
             if (other.GetComponent<PlayerStateController>().HoldingMop())
             {
+                other.GetComponent<PlayerAudio>().PlayScrub();
                 this.gameObject.SetActive(false);
                 return;
             }
@@ -26,10 +27,17 @@ public class SlideArea : MonoBehaviour
         }
     }
 
-    Vector3 initSize;
     private void Start()
     {
-        initSize = transform.localScale;
+        if (GetComponent<SlipperyAudio>())
+        {
+            GetComponent<SlipperyAudio>().PlaySoap();
+        }
+    }
+
+    public void PlaySoap()
+    {
+        GetComponent<SlipperyAudio>().PlaySoap();
     }
 
 }

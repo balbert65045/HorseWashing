@@ -16,6 +16,10 @@ public class StationArea : MonoBehaviour
     [SerializeField] bool Left = false;
     [SerializeField] SlipperyStateArea SliperyArea;
 
+    [SerializeField] ParticleSystem Shampooing;
+    [SerializeField] ParticleSystem Bubbles;
+
+
     [SerializeField] MeshRenderer m_Renderer;
     [SerializeField] Material m_happyMaterial;
     [SerializeField] Material m_neutralMaterial;
@@ -48,7 +52,14 @@ public class StationArea : MonoBehaviour
 
     private void Update()
     {
-        if(horseHolding != null)
+        if(shampooing && Time.time > LastShampooed + ShampooTime)
+        {
+            shampooing = false;
+            Shampooing.Stop();
+            Bubbles.Stop();
+        }
+
+        if (horseHolding != null)
         {
             float angerStepThreshold = horseHolding.AngerTime / 3;
             switch (currentState)
@@ -87,12 +98,13 @@ public class StationArea : MonoBehaviour
         }
         //Lose points
         FindObjectOfType<Points>().RemovePoints(10);
-
+        FindObjectOfType<PlayerAudio>().PlayWhine();
         Leave();
     }
 
     void Leave()
     {
+        stationAudio.PlayHorseLeavingAudio();
         CurrentInteractionAmount = 0;
         horseHolding.gameObject.SetActive(true);
         horseHolding.BeginLeaving();
@@ -122,11 +134,19 @@ public class StationArea : MonoBehaviour
         }
     }
 
+    float LastShampooed = 0f;
+    float ShampooTime = 1f;
+    bool shampooing = false;
 
     public void Interact()
     {
         if (horseHolding == null) { return; }
         CurrentInteractionAmount++;
+        Shampooing.Play();
+        Bubbles.Play();
+        shampooing = true;
+        LastShampooed = Time.time;
+        FindObjectOfType<PlayerAudio>().PlayLather();
         bool finished = CurrentInteractionAmount == MaxInteractionAmount;
         if(OnStationInteract != null)
         {
@@ -137,9 +157,24 @@ public class StationArea : MonoBehaviour
         }
     }
 
+    public void Feed()
+    {
+        if (horseHolding == null) { return; }
+        if (!horseHolding.hungry) { return; }
+        horseHolding.Eat();
+        if (FindObjectOfType<Points>())
+        {
+            FindObjectOfType<Points>().AddPoints(5);
+        }
+        FindObjectOfType<PlayerStateController>().LetGoOfCarrot();
+    }
+
     public void FinishCleaningHorse()
     {
-        FindObjectOfType<Points>().AddPoints(10);
+        if (FindObjectOfType<Points>())
+        {
+            FindObjectOfType<Points>().AddPoints(10);
+        }
 
         IncreaseSlipperyArea();
         //Give points

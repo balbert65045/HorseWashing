@@ -13,7 +13,6 @@ public class GameplayController : MonoBehaviour
     {
         Time.timeScale = 1;
         FindObjectOfType<Timer>().SetTime(GameplayTime);
-        AudioManager.instance.PlayMusic();
     }
 
     // Update is called once per frame

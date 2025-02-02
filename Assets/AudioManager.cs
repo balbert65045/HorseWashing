@@ -6,7 +6,8 @@ public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance;
     [SerializeField] AudioSource HorseEnter;
-    [SerializeField] AudioSource Music;
+    [SerializeField] AudioSource Pickup;
+    [SerializeField] AudioSource SetDown;
 
 
     private void Awake()
@@ -27,8 +28,14 @@ public class AudioManager : MonoBehaviour
         HorseEnter.Play();
     }
 
-    public void PlayMusic()
+    public void PlayPickup()
     {
-        Music.Play();
+        Pickup.Play();
     }
+
+    public void PlaySetDown()
+    {
+        SetDown.Play();
+    }
+
 }

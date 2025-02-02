@@ -13,8 +13,18 @@ public class Horse : MonoBehaviour
     public float AngerTime = 8;
     NavMeshAgent agent;
 
+    public bool hungry = true;
+    public void Eat()
+    {
+        hungry = false;
+        //Play audio
+        horseAudio.PlayEat();
+        AngerTime += AngerTime;
+    }
+
     public bool leaving = false;
     bool entered = false;
+
 
     Animator animator;
     // Start is called before the first frame update
@@ -22,7 +32,15 @@ public class Horse : MonoBehaviour
 
     private void Start()
     {
-        FindObjectOfType<GameplayController>().OnLevelComplete += OnLevelComplete;
+        if (FindObjectOfType<GameplayController>())
+        {
+            FindObjectOfType<GameplayController>().OnLevelComplete += OnLevelComplete;
+        }
+    }
+
+    private void OnDestroy()
+    {
+        //FindObjectOfType<GameplayController>().OnLevelComplete -= OnLevelComplete;
     }
 
     void OnLevelComplete()

@@ -5,6 +5,13 @@ using UnityEngine.EventSystems;
 
 public class PlayerMovement : MonoBehaviour
 {
+
+    [SerializeField] ParticleSystem DashSuds;
+    [SerializeField] ParticleSystem DashBubbles;
+
+
+    [SerializeField] Animator animator;
+    [SerializeField] float AbsoluteMaxSpeed = 100f;
     //[SerializeField] AudioSource MovingAudio;
     [SerializeField] float Acceleration = 1f;
     [SerializeField] float Decelleration = 1f;
@@ -33,20 +40,25 @@ public class PlayerMovement : MonoBehaviour
 //    Animator animator;
     List<SlideArea> slideAreasInside = new List<SlideArea>();
 
+    public SlideArea GetSlideArea() { return slideAreasInside[0]; }
+
     public bool inSlideArea()
     {
         return slideAreasInside.Count > 0;
     }
 
-    public void Bounce()
+    public void Bounce(Vector3 dir, float bounceCoefficient)
     {
-
+        GetComponent<PlayerAudio>().PlayArf();
+        float speedAmount = Mathf.Clamp(moveDirection.magnitude * bounceCoefficient, 0, AbsoluteMaxSpeed);
+        moveDirection = speedAmount * dir.normalized;
     }
 
     public void SetSlide(bool value, SlideArea slideArea)
     {
         if (value)
         {
+            //GetComponent<PlayerAudio>().PlaySlipAudio();
             if (slideAreasInside.Count == 0)
             {
                 currentAcceleration = SlideAcceleration;
@@ -98,12 +110,19 @@ public class PlayerMovement : MonoBehaviour
 
             //animator.SetBool("IsMoving", false);
         }
-        if (Input.GetKeyDown(KeyCode.Space) && dashAvailable && !isDashing)
+        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetButtonDown("Dash")) && dashAvailable && !isDashing)
         {
             dashAvailable = false;
             isDashing = true;
             timeOfDash = Time.timeSinceLevelLoad;
-            GetComponent<PlayerStateController>().AttemptToSpillShampoo();
+            GetComponent<PlayerAudio>().PlayDash();
+            if (GetComponent<PlayerStateController>().AttemptToSpillShampoo())
+            {
+                DashSuds.Play();
+                DashSuds.transform.position = transform.position;
+                DashBubbles.Play();
+                DashBubbles.transform.position = transform.position;
+            }
         }
 
         if(dashCoolingDown && Time.timeSinceLevelLoad > timeOfDash + DashTime + DashCooldown)
@@ -113,6 +132,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    bool walking = false;
     void FixedUpdate()
     {
         float speed = 1;
@@ -127,6 +147,12 @@ public class PlayerMovement : MonoBehaviour
         }
         if (moveDirection == Vector3.zero)
         {
+            animator.SetBool("Walking", false);
+            if (walking)
+            {
+                walking = false;
+                GetComponent<PlayerAudio>().StopWalking();
+            }
             /*
             if (MovingAudio.isPlaying)
             {
@@ -136,6 +162,12 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
+            animator.SetBool("Walking", true);
+            if (!walking)
+            {
+                walking = true;
+                GetComponent<PlayerAudio>().StartWalking();
+            }
             /*
             if (!MovingAudio.isPlaying)
             {
