@@ -175,7 +175,7 @@ public class StationArea : MonoBehaviour
         {
             FindObjectOfType<Points>().AddPoints(10);
         }
-
+        AudioManager.instance.PlaySuccess();
         IncreaseSlipperyArea();
         //Give points
         Leave();

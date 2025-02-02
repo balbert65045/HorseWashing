@@ -8,6 +8,12 @@ public class AudioManager : MonoBehaviour
     [SerializeField] AudioSource HorseEnter;
     [SerializeField] AudioSource Pickup;
     [SerializeField] AudioSource SetDown;
+    [SerializeField] AudioSource Success;
+
+    public void PlaySuccess()
+    {
+        Success.Play();
+    }
 
 
     private void Awake()
