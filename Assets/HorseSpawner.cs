@@ -17,14 +17,14 @@ public class HorseSpawner : MonoBehaviour
 
     void Update()
     {
-        if(Time.time > IncreaseTime)
+        if(Time.timeSinceLevelLoad > IncreaseTime)
         {
             TimeUntilHorseSpawn -= 3f;
             IncreaseTime += IncreaseTime;
         }
 
-        if (Time.time > LastCallTime) { return; }
-        if (Time.time > lastHorseSpawnedTime + TimeUntilHorseSpawn)
+        if (Time.timeSinceLevelLoad > LastCallTime) { return; }
+        if (Time.timeSinceLevelLoad > lastHorseSpawnedTime + TimeUntilHorseSpawn)
         {
             SpawnHose();
         }

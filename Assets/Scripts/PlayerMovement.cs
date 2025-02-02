@@ -58,6 +58,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (value)
         {
+            //GetComponent<PlayerAudio>().PlaySlipAudio();
             if (slideAreasInside.Count == 0)
             {
                 currentAcceleration = SlideAcceleration;
@@ -114,6 +115,7 @@ public class PlayerMovement : MonoBehaviour
             dashAvailable = false;
             isDashing = true;
             timeOfDash = Time.timeSinceLevelLoad;
+            GetComponent<PlayerAudio>().PlayDash();
             if (GetComponent<PlayerStateController>().AttemptToSpillShampoo())
             {
                 DashSuds.Play();
@@ -130,6 +132,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    bool walking = false;
     void FixedUpdate()
     {
         float speed = 1;
@@ -145,6 +148,11 @@ public class PlayerMovement : MonoBehaviour
         if (moveDirection == Vector3.zero)
         {
             animator.SetBool("Walking", false);
+            if (walking)
+            {
+                walking = false;
+                GetComponent<PlayerAudio>().StopWalking();
+            }
             /*
             if (MovingAudio.isPlaying)
             {
@@ -155,7 +163,11 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             animator.SetBool("Walking", true);
-
+            if (!walking)
+            {
+                walking = true;
+                GetComponent<PlayerAudio>().StartWalking();
+            }
             /*
             if (!MovingAudio.isPlaying)
             {
