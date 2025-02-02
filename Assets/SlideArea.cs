@@ -34,4 +34,9 @@ public class SlideArea : MonoBehaviour
         }
     }
 
+    public void PlaySoap()
+    {
+        GetComponent<SlipperyAudio>().PlaySoap();
+    }
+
 }

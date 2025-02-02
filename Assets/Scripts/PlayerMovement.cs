@@ -6,6 +6,10 @@ using UnityEngine.EventSystems;
 public class PlayerMovement : MonoBehaviour
 {
 
+    [SerializeField] ParticleSystem DashSuds;
+    [SerializeField] ParticleSystem DashBubbles;
+
+
     [SerializeField] Animator animator;
     [SerializeField] float AbsoluteMaxSpeed = 100f;
     //[SerializeField] AudioSource MovingAudio;
@@ -35,6 +39,8 @@ public class PlayerMovement : MonoBehaviour
 
 //    Animator animator;
     List<SlideArea> slideAreasInside = new List<SlideArea>();
+
+    public SlideArea GetSlideArea() { return slideAreasInside[0]; }
 
     public bool inSlideArea()
     {
@@ -108,7 +114,13 @@ public class PlayerMovement : MonoBehaviour
             dashAvailable = false;
             isDashing = true;
             timeOfDash = Time.timeSinceLevelLoad;
-            GetComponent<PlayerStateController>().AttemptToSpillShampoo();
+            if (GetComponent<PlayerStateController>().AttemptToSpillShampoo())
+            {
+                DashSuds.Play();
+                DashSuds.transform.position = transform.position;
+                DashBubbles.Play();
+                DashBubbles.transform.position = transform.position;
+            }
         }
 
         if(dashCoolingDown && Time.timeSinceLevelLoad > timeOfDash + DashTime + DashCooldown)

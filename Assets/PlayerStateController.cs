@@ -118,12 +118,20 @@ public class PlayerStateController : MonoBehaviour
 
     }
 
-    public void AttemptToSpillShampoo()
+    public bool AttemptToSpillShampoo()
     {
-        if (HoldingShampoo() && !pm.inSlideArea())
+        if (HoldingShampoo())
         {
-            SpawnSlideArea();
+            if (!pm.inSlideArea())
+            {
+                SpawnSlideArea();
+            }
+            else
+            {
+                pm.GetSlideArea().PlaySoap();
+            }
         }
+        return HoldingShampoo();
     }
 
     void SpawnSlideArea()
