@@ -87,12 +87,13 @@ public class StationArea : MonoBehaviour
         }
         //Lose points
         FindObjectOfType<Points>().RemovePoints(10);
-
+        FindObjectOfType<PlayerAudio>().PlayWhine();
         Leave();
     }
 
     void Leave()
     {
+        stationAudio.PlayHorseLeavingAudio();
         CurrentInteractionAmount = 0;
         horseHolding.gameObject.SetActive(true);
         horseHolding.BeginLeaving();
@@ -127,6 +128,7 @@ public class StationArea : MonoBehaviour
     {
         if (horseHolding == null) { return; }
         CurrentInteractionAmount++;
+        FindObjectOfType<PlayerAudio>().PlayLather();
         bool finished = CurrentInteractionAmount == MaxInteractionAmount;
         if(OnStationInteract != null)
         {

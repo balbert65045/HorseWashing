@@ -41,6 +41,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void Bounce(Vector3 dir, float bounceCoefficient)
     {
+        GetComponent<PlayerAudio>().PlayArf();
         float speedAmount = Mathf.Clamp(moveDirection.magnitude * bounceCoefficient, 0, AbsoluteMaxSpeed);
         moveDirection = speedAmount * dir.normalized;
     }

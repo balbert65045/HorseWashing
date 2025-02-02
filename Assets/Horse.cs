@@ -25,6 +25,11 @@ public class Horse : MonoBehaviour
         FindObjectOfType<GameplayController>().OnLevelComplete += OnLevelComplete;
     }
 
+    private void OnDestroy()
+    {
+        FindObjectOfType<GameplayController>().OnLevelComplete -= OnLevelComplete;
+    }
+
     void OnLevelComplete()
     {
         horseAudio.StopWalking();

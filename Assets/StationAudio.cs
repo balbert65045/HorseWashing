@@ -6,6 +6,7 @@ public class StationAudio : MonoBehaviour
 {
     [SerializeField] AudioSource HorseEntering;
     [SerializeField] AudioSource HorseGettingMad;
+    [SerializeField] AudioSource HorseLeavingAudio;
     
     public void PlayHorseEntering()
     {
@@ -15,5 +16,10 @@ public class StationAudio : MonoBehaviour
     public void PlayHorseGettingMad()
     {
         HorseGettingMad.Play();
+    }
+
+    public void PlayHorseLeavingAudio()
+    {
+        HorseLeavingAudio.Play();
     }
 }
