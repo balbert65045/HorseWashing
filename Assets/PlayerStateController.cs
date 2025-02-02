@@ -26,7 +26,10 @@ public class PlayerStateController : MonoBehaviour
     private void Start()
     {
         pm = GetComponent<PlayerMovement>();
-        FindObjectOfType<GameplayController>().OnLevelComplete += OnLevelComplete;
+        if (FindObjectOfType<GameplayController>())
+        {
+            FindObjectOfType<GameplayController>().OnLevelComplete += OnLevelComplete;
+        }
     }
 
     void OnLevelComplete()
@@ -92,25 +95,16 @@ public class PlayerStateController : MonoBehaviour
                     DropPickupMop();
                 }
             }
-            //Debug.Log(hit.transform.name);
-            //if (canDropPickupCarrot)
-            //{
-            //    DropPickupCarrot();
-            //}
-            //if (canDropPickupShampoo)
-            //{
-            //    DropPickupShampoo();
-            //}
-            //if (canDropPickupMop)
-            //{
-            //    DropPickupMop();
-            //}
-            if(currentStationToInteractWith != null && Shampoo.gameObject.activeSelf)
+        }
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (currentStationToInteractWith != null && Shampoo.gameObject.activeSelf)
             {
                 InteractWithStation();
             }
 
-            if(currentStationToInteractWith != null && Carrot.gameObject.activeSelf)
+            if (currentStationToInteractWith != null && Carrot.gameObject.activeSelf)
             {
                 FeedStation();
             }

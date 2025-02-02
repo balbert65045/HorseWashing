@@ -15,7 +15,10 @@ public class HorseAudio : MonoBehaviour
 
     public void StopWalking()
     {
-        walkingAudio.Stop();
+        if(walkingAudio != null)
+        {
+            walkingAudio.Stop();
+        }
     }
 
     public void PlayEat()

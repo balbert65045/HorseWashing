@@ -32,7 +32,10 @@ public class Horse : MonoBehaviour
 
     private void Start()
     {
-        FindObjectOfType<GameplayController>().OnLevelComplete += OnLevelComplete;
+        if (FindObjectOfType<GameplayController>())
+        {
+            FindObjectOfType<GameplayController>().OnLevelComplete += OnLevelComplete;
+        }
     }
 
     private void OnDestroy()

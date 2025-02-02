@@ -168,7 +168,10 @@ public class StationArea : MonoBehaviour
 
     public void FinishCleaningHorse()
     {
-        FindObjectOfType<Points>().AddPoints(10);
+        if (FindObjectOfType<Points>())
+        {
+            FindObjectOfType<Points>().AddPoints(10);
+        }
 
         IncreaseSlipperyArea();
         //Give points
