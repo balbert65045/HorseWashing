@@ -11,7 +11,13 @@ public class PlayerAudio : MonoBehaviour
     [SerializeField] AudioSource Scrub2;
     [SerializeField] AudioSource Dash;
     [SerializeField] AudioSource Walking;
+    [SerializeField] AudioSource SlipAudio;
 
+
+    public void PlaySlipAudio()
+    {
+        SlipAudio.Play();
+    }
 
     public void StartWalking()
     {

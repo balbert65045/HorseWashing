@@ -58,6 +58,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (value)
         {
+            //GetComponent<PlayerAudio>().PlaySlipAudio();
             if (slideAreasInside.Count == 0)
             {
                 currentAcceleration = SlideAcceleration;

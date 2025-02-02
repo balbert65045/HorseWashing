@@ -25,8 +25,6 @@ public class AudioManager : MonoBehaviour
 
     public void PlayHorseEnter()
     {
-        float pitch = Random.Range(.9f, 1.1f);
-        HorseEnter.pitch = pitch;
         HorseEnter.Play();
     }
 
