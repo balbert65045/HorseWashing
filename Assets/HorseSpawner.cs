@@ -14,7 +14,6 @@ public class HorseSpawner : MonoBehaviour
     float lastHorseSpawnedTime = -100000;
 
 
-
     void Update()
     {
         if(Time.timeSinceLevelLoad > IncreaseTime)
@@ -39,7 +38,7 @@ public class HorseSpawner : MonoBehaviour
             // Have the horse wait??
             return;
         }
-        lastHorseSpawnedTime = Time.time;
+        lastHorseSpawnedTime = Time.timeSinceLevelLoad;
         GameObject spawnedHorse = Instantiate(HorsePrefab, transform.position, Quaternion.Euler(new Vector3(0, 180, 0)));
 
         spawnedHorse.GetComponent<Horse>().SetDestination(stationAreaController.GetAvailableStationArea(), Exit);

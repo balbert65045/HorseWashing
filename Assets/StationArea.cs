@@ -52,7 +52,7 @@ public class StationArea : MonoBehaviour
 
     private void Update()
     {
-        if(shampooing && Time.time > LastShampooed + ShampooTime)
+        if(shampooing && Time.timeSinceLevelLoad > LastShampooed + ShampooTime)
         {
             shampooing = false;
             Shampooing.Stop();
@@ -65,14 +65,14 @@ public class StationArea : MonoBehaviour
             switch (currentState)
             {
                 case HorseState.Happy:
-                    if (Time.time - TimeSinceEnteringChair > angerStepThreshold)
+                    if (Time.timeSinceLevelLoad - TimeSinceEnteringChair > angerStepThreshold)
                     {
                         m_Renderer.material = m_neutralMaterial;
                         currentState = HorseState.Neutral;
                     }
                     break;
                 case HorseState.Neutral:
-                    if (Time.time - TimeSinceEnteringChair > angerStepThreshold * 2)
+                    if (Time.timeSinceLevelLoad - TimeSinceEnteringChair > angerStepThreshold * 2)
                     {
                         stationAudio.PlayHorseGettingMad();
 
@@ -81,7 +81,7 @@ public class StationArea : MonoBehaviour
                     }
                     break;
                 case HorseState.Mad:
-                    if (Time.time - TimeSinceEnteringChair > angerStepThreshold * 3)
+                    if (Time.timeSinceLevelLoad - TimeSinceEnteringChair > angerStepThreshold * 3)
                     {
                         LeaveMad();
                     }
@@ -145,7 +145,7 @@ public class StationArea : MonoBehaviour
         Shampooing.Play();
         Bubbles.Play();
         shampooing = true;
-        LastShampooed = Time.time;
+        LastShampooed = Time.timeSinceLevelLoad;
         FindObjectOfType<PlayerAudio>().PlayLather();
         bool finished = CurrentInteractionAmount == MaxInteractionAmount;
         if(OnStationInteract != null)
@@ -194,7 +194,7 @@ public class StationArea : MonoBehaviour
 
         currentState = HorseState.Happy;
         horseHolding = horse;
-        TimeSinceEnteringChair = Time.time;
+        TimeSinceEnteringChair = Time.timeSinceLevelLoad;
 
 
         m_Renderer.material = m_happyMaterial;

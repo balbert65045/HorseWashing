@@ -6,6 +6,7 @@ using UnityEngine.UIElements.Experimental;
 
 public class Horse : MonoBehaviour
 {
+    [SerializeField] int Points = 10;
     [SerializeField] float EnterCharDistance = 1.7f;
     [SerializeField] StationArea Destination;
     [SerializeField] GameObject Exit;
