@@ -10,6 +10,7 @@ public class SlideArea : MonoBehaviour
         {
             if (other.GetComponent<PlayerStateController>().HoldingMop())
             {
+                other.GetComponent<PlayerAudio>().PlayScrub();
                 this.gameObject.SetActive(false);
                 return;
             }
