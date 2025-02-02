@@ -13,6 +13,9 @@ public enum HorseState
 
 public class StationArea : MonoBehaviour
 {
+
+    [SerializeField] GameObject Happy;
+    [SerializeField] GameObject Angry;
     [SerializeField] bool Left = false;
     [SerializeField] SlipperyStateArea SliperyArea;
 
@@ -75,6 +78,8 @@ public class StationArea : MonoBehaviour
                     if (Time.timeSinceLevelLoad - TimeSinceEnteringChair > angerStepThreshold * 2)
                     {
                         stationAudio.PlayHorseGettingMad();
+                        Happy.gameObject.SetActive(false);
+                        Angry.gameObject.SetActive(true);
 
                         m_Renderer.material = m_MadMaterial;
                         currentState = HorseState.Mad;
@@ -104,6 +109,8 @@ public class StationArea : MonoBehaviour
 
     void Leave()
     {
+        Happy.gameObject.SetActive(false);
+        Angry.gameObject.SetActive(false);
         stationAudio.PlayHorseLeavingAudio();
         CurrentInteractionAmount = 0;
         horseHolding.gameObject.SetActive(true);
@@ -190,7 +197,8 @@ public class StationArea : MonoBehaviour
     public void HoldHorse(Horse horse)
     {
         stationAudio.PlayHorseEntering();
-
+        Happy.gameObject.SetActive(true);
+        Angry.gameObject.SetActive(false);
 
         currentState = HorseState.Happy;
         horseHolding = horse;

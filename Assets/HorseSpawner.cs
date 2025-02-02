@@ -5,7 +5,7 @@ using UnityEngine;
 public class HorseSpawner : MonoBehaviour
 {
     [SerializeField] GameObject Exit;
-    [SerializeField] GameObject HorsePrefab;
+    [SerializeField] List<GameObject> HorsePrefabs;
     [SerializeField] float TimeUntilHorseSpawn = 5f;
     [SerializeField] float IncreaseTime = 20f;
     [SerializeField] float LastCallTime = 110f;
@@ -39,7 +39,9 @@ public class HorseSpawner : MonoBehaviour
             return;
         }
         lastHorseSpawnedTime = Time.timeSinceLevelLoad;
-        GameObject spawnedHorse = Instantiate(HorsePrefab, transform.position, Quaternion.Euler(new Vector3(0, 180, 0)));
+
+        int randomIndex = Random.Range(0, HorsePrefabs.Count);
+        GameObject spawnedHorse = Instantiate(HorsePrefabs[randomIndex], transform.position, Quaternion.Euler(new Vector3(0, 180, 0)));
 
         spawnedHorse.GetComponent<Horse>().SetDestination(stationAreaController.GetAvailableStationArea(), Exit);
 

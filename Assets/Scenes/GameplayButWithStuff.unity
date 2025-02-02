@@ -1088,6 +1088,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: -0.5882353
       objectReference: {fileID: 0}
+    - target: {fileID: 3596043169212043862, guid: f1f8a2059a5efb4459f3c0ea652c1700, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.493
+      objectReference: {fileID: 0}
     - target: {fileID: 4984458935178212375, guid: f1f8a2059a5efb4459f3c0ea652c1700, type: 3}
       propertyPath: m_Camera
       value: 
@@ -1139,6 +1143,10 @@ PrefabInstance:
     - target: {fileID: 5215084121022082782, guid: f1f8a2059a5efb4459f3c0ea652c1700, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5249892182381527134, guid: f1f8a2059a5efb4459f3c0ea652c1700, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.49299973
       objectReference: {fileID: 0}
     - target: {fileID: 5423532681388802096, guid: f1f8a2059a5efb4459f3c0ea652c1700, type: 3}
       propertyPath: m_AnchorMax.x
@@ -8139,6 +8147,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: -0.5882353
       objectReference: {fileID: 0}
+    - target: {fileID: 3596043169212043862, guid: f1f8a2059a5efb4459f3c0ea652c1700, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.4929997
+      objectReference: {fileID: 0}
     - target: {fileID: 4984458935178212375, guid: f1f8a2059a5efb4459f3c0ea652c1700, type: 3}
       propertyPath: m_Camera
       value: 
@@ -8186,6 +8198,10 @@ PrefabInstance:
     - target: {fileID: 5081213249841029164, guid: f1f8a2059a5efb4459f3c0ea652c1700, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5249892182381527134, guid: f1f8a2059a5efb4459f3c0ea652c1700, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.4929997
       objectReference: {fileID: 0}
     - target: {fileID: 5423532681388802096, guid: f1f8a2059a5efb4459f3c0ea652c1700, type: 3}
       propertyPath: m_AnchorMax.x
@@ -8353,6 +8369,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: -0.5882353
       objectReference: {fileID: 0}
+    - target: {fileID: 3596043169212043862, guid: f1f8a2059a5efb4459f3c0ea652c1700, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.49299973
+      objectReference: {fileID: 0}
     - target: {fileID: 4476448905397813679, guid: f1f8a2059a5efb4459f3c0ea652c1700, type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.318
@@ -8404,6 +8424,10 @@ PrefabInstance:
     - target: {fileID: 5081213249841029164, guid: f1f8a2059a5efb4459f3c0ea652c1700, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5249892182381527134, guid: f1f8a2059a5efb4459f3c0ea652c1700, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.49299973
       objectReference: {fileID: 0}
     - target: {fileID: 5423532681388802096, guid: f1f8a2059a5efb4459f3c0ea652c1700, type: 3}
       propertyPath: m_AnchorMax.x
@@ -14535,6 +14559,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Station (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3596043169212043862, guid: f1f8a2059a5efb4459f3c0ea652c1700, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.464
+      objectReference: {fileID: 0}
     - target: {fileID: 4984458935178212375, guid: f1f8a2059a5efb4459f3c0ea652c1700, type: 3}
       propertyPath: m_Camera
       value: 
@@ -14578,6 +14606,10 @@ PrefabInstance:
     - target: {fileID: 5081213249841029164, guid: f1f8a2059a5efb4459f3c0ea652c1700, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5249892182381527134, guid: f1f8a2059a5efb4459f3c0ea652c1700, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.464
       objectReference: {fileID: 0}
     - target: {fileID: 5423532681388802096, guid: f1f8a2059a5efb4459f3c0ea652c1700, type: 3}
       propertyPath: m_AnchorMax.x
@@ -16930,7 +16962,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Exit: {fileID: 105024786}
-  HorsePrefab: {fileID: 7677123573341006963, guid: 1860fe66a58486f449c57caa4f327fc6, type: 3}
+  HorsePrefabs:
+  - {fileID: 7677123573341006963, guid: 1860fe66a58486f449c57caa4f327fc6, type: 3}
   TimeUntilHorseSpawn: 10
   IncreaseTime: 25
   LastCallTime: 100
