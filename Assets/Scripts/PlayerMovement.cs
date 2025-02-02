@@ -5,6 +5,8 @@ using UnityEngine.EventSystems;
 
 public class PlayerMovement : MonoBehaviour
 {
+
+    [SerializeField] Animator animator;
     [SerializeField] float AbsoluteMaxSpeed = 100f;
     //[SerializeField] AudioSource MovingAudio;
     [SerializeField] float Acceleration = 1f;
@@ -130,6 +132,7 @@ public class PlayerMovement : MonoBehaviour
         }
         if (moveDirection == Vector3.zero)
         {
+            animator.SetBool("Walking", false);
             /*
             if (MovingAudio.isPlaying)
             {
@@ -139,6 +142,8 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
+            animator.SetBool("Walking", true);
+
             /*
             if (!MovingAudio.isPlaying)
             {
