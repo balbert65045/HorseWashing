@@ -11907,6 +11907,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3049888802605467481, guid: badeec66622354b4299043206eefcd9d, type: 3}
+      propertyPath: DashSuds
+      value: 
+      objectReference: {fileID: 943690980}
     - target: {fileID: 5025859905768640142, guid: badeec66622354b4299043206eefcd9d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.32

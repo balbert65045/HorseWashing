@@ -450,10 +450,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41893236384a7b44d8cfe5e7eb5ff83b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Points: 10
   EnterCharDistance: 1.7
   Destination: {fileID: 0}
   Exit: {fileID: 0}
-  AngerTime: 17
+  AngerTime: 18
   hungry: 1
   leaving: 0
 --- !u!114 &1587134931468226763
@@ -487,7 +488,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a2880135713d8694c82cd85ab24b2197, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -1.066
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a2880135713d8694c82cd85ab24b2197, type: 3}
       propertyPath: m_LocalPosition.z
